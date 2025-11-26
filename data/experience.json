@@ -1,0 +1,26 @@
+[
+    {
+        "role": "Director of Information Technology & STEM",
+        "company": "St. Mary’s Academy",
+        "summary": "Strategic IT Leadership & Cloud Infrastructure Modernization for 500+ users.\n- Directed enterprise cloud migration, moving on-prem legacy servers and domain services to Azure Active Directory.\n- Designed and deployed containerized cloud environments on AWS for Cyber Range training and Java programming labs.\n- Secured over $100k+ in grant funding and managed multi-year STEM program development, achieving accreditation in 2 years.\n- Serve as primary liaison to the Board and executive leadership for IT strategy and risk management.",
+        "range": "June 2021 - Present"
+    },
+    {
+        "role": "Adjunct Professor (Data Science & Cloud)",
+        "company": "Eastern University / University of Georgia",
+        "summary": "Subject Matter Expert designing graduate-level technical curriculum.\n- Deliver instruction on PostgreSQL database management, Python integration, and AWS Cloud Architecture.\n- Guide doctoral students in using data science methodologies and action research to solve organizational workforce challenges.\n- Translate complex technical architectural concepts for professional adult learners.",
+        "range": "August 2019 - Present"
+    },
+    {
+        "role": "Cybersecurity Program Director",
+        "company": "C3 Career Academy",
+        "summary": "Founded and scaled the county's first Cybersecurity Career Academy.\n- Achieved the highest CompTIA Security+ pass rate in Georgia through data-driven program design.\n- Established strategic partnerships with national tech companies to align curriculum with workforce needs.\n- Delivered hands-on instruction in Linux, Python, and Network Security.",
+        "range": "July 2018 - June 2021"
+    },
+    {
+        "role": "Department Chair & Technology Leader",
+        "company": "Blessed Trinity Catholic High School",
+        "summary": "Technical Leadership & Curriculum Development.\n- Created and implemented engineering and computer science pathways including AP CS, robotics, and web development.\n- Managed departmental budgets, staff, and vendor relationships for program expansion.\n- Developed business partnerships to facilitate student-driven technical projects.",
+        "range": "June 2006 - July 2018"
+    }
+]

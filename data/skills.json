@@ -1,0 +1,35 @@
+[
+  {
+      "grouping": "Cloud Architecture & Infrastructure",
+      "skills": [
+          {"name":"AWS (EC2, S3, Lambda)","icon":"aws"},
+          {"name":"Azure Active Directory","icon":"azure"},
+          "Network Security",
+          "DNS/Route53",
+          {"name":"Docker/Containers","icon":"docker"},
+          "Linux Administration"
+      ]
+  },
+  {
+      "grouping": "Data Science & Development",
+      "skills": [
+          {"name":"Python","icon":"python"},
+          {"name":"PostgreSQL","icon":"postgresql"},
+          "Pandas/Scikit-Learn",
+          "Machine Learning Modeling",
+          "SQL",
+          {"name":"Git/Version Control","icon":"git"}
+      ]
+  },
+  {
+      "grouping": "Technical Program Management",
+      "skills": [
+          "IT Strategy & Roadmap",
+          "Budget Management",
+          "Grant Writing ($100k+)",
+          "Stakeholder Management",
+          "Agile Methodologies",
+          "Curriculum Design"
+      ]
+  }
+]

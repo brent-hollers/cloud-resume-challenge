@@ -1,0 +1,36 @@
+[
+    {
+        "school": "The University of Texas at Austin",
+        "degree": "Postgraduate Certificate",
+        "major": "Cloud Architecture",
+        "notes": "Focus on AWS/Azure Infrastructure & DevOps",
+        "range": "2025"
+    },
+    {
+        "school": "Eastern University",
+        "degree": "Master of Science",
+        "major": "Data Science",
+        "notes": "Capstone: AI/ML Modeling with GIS Data & Python",
+        "range": "2021"
+    },
+    {
+        "school": "University of Georgia",
+        "degree": "Doctor of Philosophy (Ph.D.)",
+        "major": "Workforce Education",
+        "notes": "Focus on Organizational Development & Research",
+        "range": "2015 - 2017"
+    },
+    {
+        "school": "University of West Georgia",
+        "degree": "Master of Arts",
+        "major": "Secondary Education and Teaching",
+        "range": "2007 - 2012"
+    },
+    {
+        "school": "University of North Georgia",
+        "degree": "Bachelor of Business Administration",
+        "major": "Accounting",
+        "notes": "Foundation for IT Budgeting & Resource Allocation",
+        "range": "2003 - 2006"
+    }
+]

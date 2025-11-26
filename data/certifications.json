@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Google Cybersecurity Professional",
+    "description": "Google Career Certificates (V2)",
+    "badge": "img/google-cyber.png",
+    "proof": "#"
+  },
+  {
+    "name": "AWS Certified Cloud Practitioner",
+    "description": "Amazon Web Services",
+    "badge": "img/aws-cp.png",
+    "proof": "https://www.credly.com/badges/9c168644-e23c-4605-9d98-91b5db56e6c9"
+  },
+  {
+    "name": "AWS Solutions Architect – Associate",
+    "description": "Target Certification (2025)",
+    "badge": "img/aws-sa.png",
+    "proof": "#"
+  },
+  {
+    "name": "Google Certified Trainer",
+    "description": "Google for Education",
+    "badge": "img/google-train.png",
+    "proof": "#"
+  },
+  {
+    "name": "Microsoft Office Specialist Master",
+    "description": "Microsoft",
+    "badge": "img/ms-office.png",
+    "proof": "#"
+  }
+]

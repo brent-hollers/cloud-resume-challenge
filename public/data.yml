@@ -1,0 +1,10 @@
+contact:
+  email: "drhollers@gmail.com"
+  phone: "+404-227-1778"
+  social:
+    - name: "LinkedIn"
+      url: "https://www.linkedin.com/in/brent-hollers"
+      icon: "fab fa-linkedin"
+    - name: "GitHub"
+      url: "https://github.com/brent-hollers"
+      icon: "fab fa-github"
