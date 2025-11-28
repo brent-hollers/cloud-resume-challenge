@@ -1,0 +1,54 @@
+{
+  "CallerReference": "brenthollers-cf-deploy-02",
+  "Comment": "Distribution for brenthollers.com",
+  "Aliases": {
+    "Quantity": 2,
+    "Items": ["brenthollers.com", "www.brenthollers.com"]
+  },
+  "DefaultRootObject": "index.html",
+  "Origins": {
+    "Quantity": 1,
+    "Items": [
+      {
+        "Id": "S3-Website-Endpoint",
+        "DomainName": "brenthollers.com.s3-website-us-east-1.amazonaws.com",
+        "CustomOriginConfig": {
+          "HTTPPort": 80,
+          "HTTPSPort": 443,
+          "OriginProtocolPolicy": "http-only",
+          "OriginSslProtocols": {
+            "Quantity": 1,
+            "Items": ["TLSv1.2"]
+          }
+        }
+      }
+    ]
+  },
+  "DefaultCacheBehavior": {
+    "TargetOriginId": "S3-Website-Endpoint",
+    "ViewerProtocolPolicy": "redirect-to-https",
+    "AllowedMethods": {
+      "Quantity": 3,
+      "Items": ["GET", "HEAD", "OPTIONS"],
+      "CachedMethods": {
+        "Quantity": 3,
+        "Items": ["GET", "HEAD", "OPTIONS"]
+      }
+    },
+    "ForwardedValues": {
+      "QueryString": false,
+      "Cookies": { "Forward": "none" }
+    },
+    "MinTTL": 0,
+    "DefaultTTL": 86400,
+    "MaxTTL": 31536000,
+    "Compress": true
+  },
+  "CacheBehaviors": { "Quantity": 0 },
+  "ViewerCertificate": {
+    "ACMCertificateArn": "arn:aws:acm:us-east-1:736424551703:certificate/53b51fe2-fdd5-4c45-9946-d88580900deb",
+    "SSLSupportMethod": "sni-only",
+    "MinimumProtocolVersion": "TLSv1.2_2021"
+  },
+  "Enabled": true
+}

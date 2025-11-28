@@ -1,0 +1,29 @@
+{
+  "Comment": "Alias to CloudFront",
+  "Changes": [
+    {
+      "Action": "UPSERT",
+      "ResourceRecordSet": {
+        "Name": "brenthollers.com",
+        "Type": "A",
+        "AliasTarget": {
+          "HostedZoneId": "Z2FDTNDATAQYW2",
+          "DNSName": "d2jdf628fwy96z.cloudfront.net",
+          "EvaluateTargetHealth": false
+        }
+      }
+    },
+    {
+      "Action": "UPSERT",
+      "ResourceRecordSet": {
+        "Name": "www.brenthollers.com",
+        "Type": "A",
+        "AliasTarget": {
+          "HostedZoneId": "Z2FDTNDATAQYW2",
+          "DNSName": "d2jdf628fwy96z.cloudfront.net",
+          "EvaluateTargetHealth": false
+        }
+      }
+    }
+  ]
+}

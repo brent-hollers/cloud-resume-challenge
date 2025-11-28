@@ -1,0 +1,6 @@
+{
+    "RedirectAllRequestsTo": {
+        "HostName": "brenthollers.com",
+        "Protocol": "https"
+    }
+}

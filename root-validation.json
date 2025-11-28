@@ -1,0 +1,18 @@
+{
+  "Comment": "ACM Root Validation",
+  "Changes": [
+    {
+      "Action": "UPSERT",
+      "ResourceRecordSet": {
+        "Name": "_dc5c25367d36b99ff6f4974d09fa444b.brenthollers.com.",
+        "Type": "CNAME",
+        "TTL": 300,
+        "ResourceRecords": [
+          {
+            "Value": "_8cc9eb514fdd3579b6ff46e7cb3db849.jkddzztszm.acm-validations.aws."
+          }
+        ]
+      }
+    }
+  ]
+}
