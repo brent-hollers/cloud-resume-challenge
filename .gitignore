@@ -1,0 +1,14 @@
+# Hugo build output (CRITICAL: The Action builds this, not you)
+/public
+/resources/_gen
+.hugo_build.lock
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# VS Code settings (Optional, but recommended for teams/public repos)
+.vscode/
+
+# Dependency directories
+node_modules/
