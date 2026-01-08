@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Brent Hollers</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on Brent Hollers</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 07 Jan 2026 07:07:07 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/tags/about/</link>
+      <pubDate>Wed, 07 Jan 2026 07:07:07 +0100</pubDate>
+      <guid>http://localhost:1313/tags/about/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Brent Hollers</title>
+      <link>http://localhost:1313/tags/brent-hollers/</link>
+      <pubDate>Tue, 06 Jan 2026 22:55:05 -0400</pubDate>
+      <guid>http://localhost:1313/tags/brent-hollers/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Federal</title>
+      <link>http://localhost:1313/tags/federal/</link>
+      <pubDate>Tue, 06 Jan 2026 22:55:05 -0400</pubDate>
+      <guid>http://localhost:1313/tags/federal/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lift and Shift</title>
+      <link>http://localhost:1313/tags/lift-and-shift/</link>
+      <pubDate>Tue, 06 Jan 2026 22:55:05 -0400</pubDate>
+      <guid>http://localhost:1313/tags/lift-and-shift/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Modernization</title>
+      <link>http://localhost:1313/tags/modernization/</link>
+      <pubDate>Tue, 06 Jan 2026 22:55:05 -0400</pubDate>
+      <guid>http://localhost:1313/tags/modernization/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        
+        <meta name="description" content="Simple minimalist theme">
+        
+        <meta name="keywords" content="minimalist,blog,goa,hugo,developer">
+
+        <title>
+              Brent Hollers - My First Post 
+        </title>
+
+        <meta name="generator" content="Hugo 0.154.2">
+
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+        
+
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="http://localhost:1313/css/main.css">
+        <link rel="stylesheet" href="http://localhost:1313/css/custom.css">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <meta name="theme-color" content="#ffffff"></head>
+
+    <body lang="en-US">
+        <div class="container my-auto">
+
+<header class="text-start title">
+  <h1 class="title">My First Post</h1>
+</header>
+
+<section id="category-pane" class="meta">
+  
+  <div class="d-flex flex-column flex-md-row justify-content-between">
+    <h6 class="text-start meta">
+       PUBLISHED ON JAN 14, 2024
+      
+      / 5 MIN READ
+      
+    </h6>
+  </div>
+  
+</section>
+
+<section id="content-pane">
+  <div class="text-justify content">
+    
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#objective">Objective</a></li>
+    <li><a href="#the-scenario">The Scenario</a></li>
+    <li><a href="#the-solution-architecture">The Solution Architecture</a>
+      <ul>
+        <li><a href="#pre-requisites-lab-setup">Pre-Requisites (Lab Setup)</a></li>
+        <li><a href="#phase-1-lift--shift-migration">Phase 1: Lift &amp; Shift (Migration)</a></li>
+        <li><a href="#phase-2-modernization-refactor--replatform">Phase 2: Modernization (Refactor &amp; Replatform)</a></li>
+      </ul>
+    </li>
+    <li><a href="#the-outcome">The Outcome</a></li>
+    <li><a href="#lessons-learned">Lessons Learned</a>
+      <ul>
+        <li><a href="#1-the-ghost-token-aws-cli-authentication">1. The &ldquo;Ghost Token&rdquo; (AWS CLI Authentication)</a></li>
+        <li><a href="#2-the-cross-account-supply-chain-trap">2. The Cross-Account Supply Chain Trap</a></li>
+        <li><a href="#3-terraform-module-versioning">3. Terraform Module Versioning</a></li>
+      </ul>
+    </li>
+    <li><a href="#future-improvements--roadmap">Future Improvements &amp; Roadmap</a>
+      <ul>
+        <li><a href="#1-implementation-of-cicd-pipelines">1. Implementation of CI/CD Pipelines</a></li>
+        <li><a href="#2-enhanced-observability-with-container-insights">2. Enhanced Observability with Container Insights</a></li>
+        <li><a href="#3-security-hardening--secrets-management">3. Security Hardening &amp; Secrets Management</a></li>
+        <li><a href="#4-cost-optimization-moving-to-fargate">4. Cost Optimization: Moving to Fargate</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    
+    <p>Here is the content of the attached document converted into Markdown format.</p>
+<p>From On-Prem to Cloud-Native: A Federal Migration &amp; Modernization Journey</p>
+<h2 id="objective">Objective</h2>
+<p>To develop a more concrete understanding of modernization and migration strategies for complex systems which also have specific security, resiliency, and accessibility requirements, I chose to simulate a realistic Federal Cloud Transformation scenario—migrating a legacy, stateful mission application from an on-premise data center to AWS, and subsequently refactoring it into a secure, scalable, cloud-native architecture on Kubernetes.</p>
+<h2 id="the-scenario">The Scenario</h2>
+<ul>
+<li></li>
+</ul>
+<p><strong>The Client:</strong> A federal agency is running a critical &ldquo;Mission Status&rdquo; application on aging on-premise hardware (Dell PowerEdge/VMware).</p>
+<ul>
+<li></li>
+</ul>
+<p><strong>The Mandate:</strong> The agency has a mandate to evacuate the data center (Cloud First Policy) and improve the application&rsquo;s security posture and scalability (Modernization).</p>
+<hr>
+<h2 id="the-solution-architecture">The Solution Architecture</h2>
+<h3 id="pre-requisites-lab-setup">Pre-Requisites (Lab Setup)</h3>
+<p>To create a system that could be migrated, I first had to simulate an on-prem network, client, and database infrastructure.</p>
+<ul>
+<li></li>
+</ul>
+<p><strong>Framework:</strong> I chose one of the more popular frameworks, a LAMP stack.</p>
+<ul>
+<li></li>
+</ul>
+<p><strong>Network Security:</strong> I put this stack behind a network firewall using pfSense, as it is open-source and popular firewall software.</p>
+<ul>
+<li></li>
+</ul>
+<p><strong>Configuration:</strong> I had to create a port forwarding rule to access the pfSense interface from my local network since the server and the pfSense instance sit inside my local network on a separate subnet.</p>
+<ul>
+<li></li>
+</ul>
+<p><strong>Client VM:</strong> Once pfSense was running with appropriate networking, I created an Ubuntu Server client VM to host the LAMP stack.</p>
+<ul>
+<li></li>
+</ul>
+<p><strong>Application:</strong> I built a simple web server that maintains a log of entries to simulate the local, on-premises legacy application.</p>
+<h3 id="phase-1-lift--shift-migration">Phase 1: Lift &amp; Shift (Migration)</h3>
+<p>The goal was to re-host the virtual machine to Amazon EC2 using <strong>AWS Application Migration Service (MGN)</strong> to ensure immediate continuity and data integrity.</p>
+<ul>
+<li></li>
+</ul>
+<p><strong>The Bridge:</strong> I established a &ldquo;bridge&rdquo; between the on-premise environment and the AWS Cloud using AWS MGN, which provides block-level replication.</p>
+<ul>
+<li></li>
+</ul>
+<p><strong>Source Environment:</strong> A VMware ESXi 6.7 host running on a Dell PowerEdge R420 server in my home lab.</p>
+<ul>
+<li>
+<p><strong>The Process:</strong></p>
+</li>
+<li>
+<p>Installed the AWS Replication Agent on the source Linux machine.</p>
+</li>
+<li>
+<p>The agent initiated a continuous block-level sync to the <code>us-east-1</code> region.</p>
+</li>
+<li>
+<p>Once the &ldquo;Data Replication Status&rdquo; reached &ldquo;Healthy,&rdquo; I launched a Test Instance in AWS.</p>
+</li>
+<li></li>
+</ul>
+<p><strong>Validation:</strong> Verified that the application state (the local SQLite database containing &ldquo;Mission Logs&rdquo;) migrated intact. This proved we could evacuate the data center rapidly without rewriting code.</p>
+<h3 id="phase-2-modernization-refactor--replatform">Phase 2: Modernization (Refactor &amp; Replatform)</h3>
+<p>With the application in the cloud, the next step was optimization, moving from a &ldquo;pet&rdquo; (long-lived VM) to &ldquo;cattle&rdquo; (ephemeral containers).</p>
+<h4 id="1-containerization--security">1. Containerization &amp; Security</h4>
+<p>I refactored the Python application into a Docker container.</p>
+<ul>
+<li></li>
+</ul>
+<p><strong>Compliance:</strong> In alignment with <strong>NIST 800-190</strong> (Application Container Security Guide), I ensured the container adhered to &ldquo;Least Privilege&rdquo; principles.</p>
+<ul>
+<li></li>
+</ul>
+<p><strong>Base Image:</strong> Used <code>python:3.9-slim</code> to minimize the attack surface.</p>
+<ul>
+<li></li>
+</ul>
+<p><strong>Non-Root User:</strong> Explicitly created a nonroot user (<code>uid: 5678</code>) to run application processes, preventing potential privilege escalation attacks.</p>
+<h4 id="2-infrastructure-as-code-terraform">2. Infrastructure as Code (Terraform)</h4>
+<p>I avoided manual console provisioning (&ldquo;ClickOps&rdquo;) in favor of <strong>Terraform</strong>, ensuring the infrastructure is reproducible and auditable.</p>
+<ul>
+<li></li>
+</ul>
+<p><strong>Network Isolation:</strong> Provisioned a VPC (<code>fed-demo-vpc</code>) with strict isolation—Worker Nodes in private subnets and Load Balancers in public subnets.</p>
+<ul>
+<li></li>
+</ul>
+<p><strong>EKS Cluster:</strong> Deployed an Amazon EKS cluster (<code>fed-modernization-cluster</code>) using the modern <code>terraform-aws-modules/eks/aws</code> v20 module.</p>
+<ul>
+<li></li>
+</ul>
+<p><strong>Cost Optimization:</strong> Configured the Node Group (<code>green_team</code>) to utilize <strong>EC2 Spot Instances</strong> (<code>capacity_type = &quot;SPOT&quot;</code>), reducing compute costs by approximately 70% compared to On-Demand pricing.</p>
+<h4 id="3-deployment--orchestration">3. Deployment &amp; Orchestration</h4>
+<p>The final deployment utilized Kubernetes manifests to manage the application lifecycle.</p>
+<ul>
+<li></li>
+</ul>
+<p><strong>Supply Chain:</strong> The Docker image was pushed to a private <strong>Amazon ECR</strong> repository within the same account to ensure secure, low-latency access.</p>
+<ul>
+<li></li>
+</ul>
+<p><strong>Availability:</strong> Deployed the application with a LoadBalancer service type, exposing the application securely on port 80 while the container listened on port 5000.</p>
+<hr>
+<h2 id="the-outcome">The Outcome</h2>
+<p>The legacy application is now fully modernized. It runs as a lightweight, secure container orchestrated by Kubernetes. It is self-healing, auto-scalable, and significantly cheaper to run than the original on-premises virtual machine.</p>
+<hr>
+<h2 id="lessons-learned">Lessons Learned</h2>
+<p>No migration is perfect. Here are the key technical challenges encountered and resolved during this project:</p>
+<h3 id="1-the-ghost-token-aws-cli-authentication">1. The &ldquo;Ghost Token&rdquo; (AWS CLI Authentication)</h3>
+<ul>
+<li></li>
+</ul>
+<p><strong>Issue:</strong> Terraform operations failed with <code>ExpiredToken</code> errors, even after updating credentials.</p>
+<ul>
+<li></li>
+</ul>
+<p><strong>Root Cause:</strong> The CLI environment was caching a temporary AWS SSO session token, which took precedence over the static IAM Access Keys I was trying to use.</p>
+<ul>
+<li></li>
+</ul>
+<p><strong>Fix:</strong> Performed a &ldquo;nuclear&rdquo; cleanup of the PowerShell environment (<code>Remove-Item Env:\AWS_SESSION_TOKEN</code>) to force the CLI to re-authenticate using the correct static profile.</p>
+<h3 id="2-the-cross-account-supply-chain-trap">2. The Cross-Account Supply Chain Trap</h3>
+<ul>
+<li></li>
+</ul>
+<p><strong>Issue:</strong> Kubernetes pods failed with <code>ImagePullBackOff</code>.</p>
+<ul>
+<li></li>
+</ul>
+<p><strong>Root Cause:</strong> The EKS cluster was in one AWS account, but I had initially pushed the Docker image to a registry in a different root account. By default, EKS cannot pull images from a different account&rsquo;s private registry.</p>
+<ul>
+<li></li>
+</ul>
+<p><strong>Fix:</strong> Adhering to the &ldquo;Data Gravity&rdquo; principle, I created a new ECR repository within the testing account and re-pushed the image.</p>
+<h3 id="3-terraform-module-versioning">3. Terraform Module Versioning</h3>
+<ul>
+<li></li>
+</ul>
+<p><strong>Issue:</strong> The initial Terraform plan failed due to unsupported block types (<code>elastic_gpu_specifications</code>).</p>
+<ul>
+<li></li>
+</ul>
+<p><strong>Root Cause:</strong> Attempted to use an older EKS module version with the newest AWS Provider (v5.x), which had deprecated specific features.</p>
+<ul>
+<li></li>
+</ul>
+<p><strong>Fix:</strong> Upgraded the EKS module to <code>~&gt; 20.0</code> and updated the <code>main.tf</code> configuration to align with the modern v20 schema.</p>
+<hr>
+<h2 id="future-improvements--roadmap">Future Improvements &amp; Roadmap</h2>
+<p>While this project demonstrated an MVP migration, the following areas were identified for evolution into an enterprise-grade environment.</p>
+<h3 id="1-implementation-of-cicd-pipelines">1. Implementation of CI/CD Pipelines</h3>
+<ul>
+<li></li>
+</ul>
+<p><strong>Current State:</strong> Container images are built locally and pushed manually.</p>
+<ul>
+<li></li>
+</ul>
+<p><strong>The Upgrade:</strong> Implement a fully automated CI/CD pipeline using AWS CodePipeline and CodeBuild (or GitHub Actions).</p>
+<ul>
+<li></li>
+</ul>
+<p><strong>Goal:</strong> Any commit to the main branch triggers an automated build, scan, and rolling update.</p>
+<h3 id="2-enhanced-observability-with-container-insights">2. Enhanced Observability with Container Insights</h3>
+<ul>
+<li></li>
+</ul>
+<p><strong>Current State:</strong> Monitoring is limited to basic EC2 metrics and CLI status checks.</p>
+<ul>
+<li></li>
+</ul>
+<p><strong>The Upgrade:</strong> Enable CloudWatch Container Insights or deploy a Prometheus/Grafana stack.</p>
+<ul>
+<li></li>
+</ul>
+<p><strong>Goal:</strong> Gain granular visibility into pod-level metrics and centralized logging.</p>
+<h3 id="3-security-hardening--secrets-management">3. Security Hardening &amp; Secrets Management</h3>
+<ul>
+<li></li>
+</ul>
+<p><strong>Current State:</strong> Environment variables are injected directly via Kubernetes manifests.</p>
+<ul>
+<li></li>
+</ul>
+<p><strong>The Upgrade:</strong> Integrate AWS Secrets Manager using the AWS Secrets and Configuration Provider (ASCP).</p>
+<ul>
+<li></li>
+</ul>
+<p><strong>Goal:</strong> Rotate and retrieve credentials programmatically at runtime without exposing them in plain text.</p>
+<h3 id="4-cost-optimization-moving-to-fargate">4. Cost Optimization: Moving to Fargate</h3>
+<ul>
+<li></li>
+</ul>
+<p><strong>Current State:</strong> Application runs on managed EC2 Node Groups.</p>
+<ul>
+<li></li>
+</ul>
+<p><strong>The Upgrade:</strong> Migrating the data plane to AWS Fargate for EKS.</p>
+<ul>
+<li></li>
+</ul>
+<p><strong>Goal:</strong> Run pods without managing underlying EC2 servers to reduce operational overhead.</p>
+
+  </div>
+</section>
+
+<section id="tag-pane" class="meta">
+  
+  <div class="d-flex flex-column flex-md-row justify-content-between">
+    <h6 class="text-end meta">
+      
+    </h6>
+  </div>
+  
+</section>
+
+
+
+
+
+
+
+<section id="menu-pane" class="menu text-center">
+  
+  <nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center">
+      
+      
+
+      <li class="menu-item">
+        
+        <a class="menu-item" href="/posts">posts</a>
+        
+        <span class="menu-item">&nbsp;|&nbsp;</span>
+        
+      </li>
+
+      
+      <li class="menu-item">
+        <a class="menu-item" href="http://localhost:1313/posts/second/">next &gt;</a>
+      </li>
+      
+      
+    </ul>
+  </nav>
+  
+  <h4 class="text-center mt-3"><a class="menu-item" href="http://localhost:1313/">home</a></h4>
+</section>
+
+<footer class="text-center footer">
+  <hr />
+  
+  <h6 class="text-center copyright">© 2024. Panjim Goa. <a href="http://creativecommons.org/licenses/by/3.0/">Some Rights Reserved</a>.</h6>
+  
+  <h6 class="text-center powered"><a href="https://gohugo.io/">Hugo</a> <a
+      href="https://github.com/shenoydotme/hugo-goa">Goa</a> by <a href="https://shenoy.me">shenoydotme</a> and <a
+      href="https://incirclemedia.com">Incircle Media</a></h6>
+  
+  
+  <h6>
+    <a href="http://localhost:1313/index.xml" aria-label="RSS Feed"><i class="fas fa-rss" aria-hidden="true"></i></a>
+  </h6>
+  
+  
+
+</footer>
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+
+<script>hljs.highlightAll();</script>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="/js/custom.js"></script>
+</body>
+
+</html>
+
