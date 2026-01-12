@@ -49,6 +49,7 @@ socialmarkup = true
 toc = true
 displayrssicon = true
 
+
 ## Main Menu
 [[menu.main]]
 name = "posts"

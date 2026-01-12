@@ -13,7 +13,7 @@
       <link>http://localhost:1313/projects/</link>
       <pubDate>Tue, 06 Jan 2026 22:55:05 -0400</pubDate>
       <guid>http://localhost:1313/projects/</guid>
-      <description>&lt;p&gt;+++&#xA;title = &amp;lsquo;My First Post&amp;rsquo;&#xA;date = 2024-01-14T07:07:07+01:00&#xA;draft = false&#xA;+++&lt;/p&gt;&#xA;&lt;h2 id=&#34;objective&#34;&gt;Objective&lt;/h2&gt;&#xA;&lt;p&gt;To develop a more concrete understanding of modernization and migration strategies for complex systems which also have specific security, resiliency, and accessibility requirements, I chose to simulate a realistic Federal Cloud Transformation scenario—migrating a legacy, stateful mission application from an on-premise data center to AWS, and subsequently refactoring it into a secure, scalable, cloud-native architecture on Kubernetes.&lt;/p&gt;</description>
+      <description>&lt;h3 id=&#34;objective&#34;&gt;Objective&lt;/h3&gt;&#xA;&lt;p&gt;To develop a more concrete understanding of modernization and migration strategies for complex systems which also has specific security, resiliency, and accessibility requirements, I chose to simulate a realistic Federal Cloud Transformation scenario—migrating a legacy, stateful mission application from an on-premise data center to AWS, and subsequently refactoring it into a secure, scalable, cloud-native architecture on Kubernetes.&#xA;The Scenario:&#xA;A federal agency is running a critical &amp;ldquo;Mission Status&amp;rdquo; application on aging on-premise hardware (Dell PowerEdge/VMware). The agency has a mandate to evacuate the data center (Cloud First Policy) and improve the application&amp;rsquo;s security posture and scalability (Modernization).&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
