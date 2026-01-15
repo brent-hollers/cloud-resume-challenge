@@ -13,7 +13,7 @@
         <meta name="keywords" content="minimalist,blog,goa,hugo,developer">
 
         <title>
-              Brent Hollers - My Second Post 
+              Brent Hollers - What I learned when preparing for the Cloud Solutions Architect Exam 
         </title>
 
         <meta name="generator" content="Hugo 0.154.2">
@@ -41,16 +41,16 @@
         <div class="container my-auto">
 
 <header class="text-start title">
-  <h1 class="title">My Second Post</h1>
+  <h1 class="title">What I learned when preparing for the Cloud Solutions Architect Exam</h1>
 </header>
 
 <section id="category-pane" class="meta">
   
   <div class="d-flex flex-column flex-md-row justify-content-between">
     <h6 class="text-start meta">
-       PUBLISHED ON FEB 1, 2024
+       PUBLISHED ON JAN 2, 2026
       
-      / 0 MIN READ
+      / 3 MIN READ
       
     </h6>
   </div>
@@ -60,19 +60,57 @@
 <section id="content-pane">
   <div class="text-justify content">
     
-    <h2 id="heading-of-the-post">Heading of the Post</h2>
-<p>Start writing your content here. You can add more sections, images, links, and various formatting to enrich your post. Here are some ideas to get started:</p>
-<h3 id="subheading-for-a-section">Subheading for a Section</h3>
-<p>Discuss a specific topic in detail here. You can add personal insights, professional tips, or any relevant information.</p>
-<h4 id="example-code-blocks">Example Code Blocks</h4>
-<h5 id="javascript">JavaScript</h5>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Welcome to my second post!&#34;</span>);
-</span></span></code></pre></div><h5 id="go">Go</h5>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Welcome to my second post!&#34;</span>)
-</span></span></code></pre></div><h5 id="python">Python</h5>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10</span>):
-</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Welcome to my second post!&#34;</span>)
-</span></span></code></pre></div>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#it-takes-a-village-and-a-program">It Takes a Village (and a Program)</a></li>
+    <li><a href="#the-shift-from-definitions-to-scenarios">The Shift: From Definitions to Scenarios</a></li>
+    <li><a href="#the-strategy-practice-as-a-discovery-tool">The Strategy: Practice as a Discovery Tool</a>
+      <ul>
+        <li><a href="#the-gemini-loop">The &ldquo;Gemini&rdquo; Loop</a></li>
+      </ul>
+    </li>
+    <li><a href="#summary">Summary</a></li>
+  </ul>
+</nav>
+    
+    <p>Here is a draft of the follow-up article, shifted to a first-person perspective to incorporate your personal experiences with the specific programs and mentors you mentioned.</p>
+<hr>
+<h1 id="leveling-up-my-journey-to-the-aws-solutions-architect-associate">Leveling Up: My Journey to the AWS Solutions Architect Associate</h1>
+<p>If the AWS Cloud Practitioner exam is the &ldquo;what&rdquo; of the cloud, the AWS Certified Solutions Architect – Associate (SAA-C03) is emphatically the &ldquo;how&rdquo; and the &ldquo;why.&rdquo;</p>
+<p>I recently passed the Solutions Architect exam, and I want to be transparent: this is a different beast entirely. It requires a significantly higher investment of prep time and mental energy. While the foundational exam tests your vocabulary, this exam tests your intuition and your ability to architect complex systems under specific constraints.</p>
+<p>Here is how I bridged the gap, the resources that were vital to my success, and the strategy I used to conquer the &ldquo;Gold Standard&rdquo; of cloud certifications.</p>
+<h2 id="it-takes-a-village-and-a-program">It Takes a Village (and a Program)</h2>
+<p>Unlike the foundational exam, where self-study is often sufficient, I found immense value in structured, rigorous learning. I leveraged the <a href="https://onlineexeced.mccombs.utexas.edu/utaustin-pgp-online-cloud-computing"><strong>Post Graduate Program in Cloud Computing offered by UT-Austin and Great Learning</strong></a>.</p>
+<p>This program was instrumental for a few reasons:</p>
+<ul>
+<li><strong>Structured Hands-on Support:</strong> The weekly hands-on sessions kept me honest and ensured I wasn&rsquo;t just reading about services, but actually configuring them.</li>
+<li><strong>Expert Mentorship:</strong> I cannot overstate the value of having an expert to guide you when you hit a wall. A huge shout-out to <strong><a href="https://www.linkedin.com/in/sachin-trivedi-4323478/">Sachin Trivedi</a></strong>, whose assistance and guidance were pivotal in helping me grasp the architectural nuances needed to pass.</li>
+</ul>
+<h2 id="the-shift-from-definitions-to-scenarios">The Shift: From Definitions to Scenarios</h2>
+<p>The biggest shock for many candidates is the question format. You will rarely be asked, &ldquo;What is AWS Glue?&rdquo; Instead, you will be presented with a paragraph-long scenario:</p>
+<blockquote>
+<p><em>&ldquo;A company needs to migrate a database to AWS, requires automatic failover, must handle high throughput for analytics, and needs to minimize code changes. Which combination of services fits?&rdquo;</em></p>
+</blockquote>
+<p>To answer these, you need a deep, not broad, understanding. I found that success required mastering specific, complex domains:</p>
+<ul>
+<li><strong>Advanced Networking:</strong> It is no longer enough to know what a VPC is. You need to understand the distinct use cases for Application Load Balancers (ALB) vs. Network Load Balancers (NLB), and how Gateway Endpoints differ from Interface Endpoints.</li>
+<li><strong>CDN &amp; Caching:</strong> You need to know exactly how CloudFront interacts with S3 and custom origins to lower latency.</li>
+<li><strong>ETL (Extract, Transform, Load):</strong> Understanding how to move and transform data (AWS Glue) between sources is critical for the data-heavy portion of the exam.</li>
+</ul>
+<h2 id="the-strategy-practice-as-a-discovery-tool">The Strategy: Practice as a Discovery Tool</h2>
+<p>The &ldquo;Build, Document, Showcase&rdquo; method I used for the Cloud Practitioner is still the foundation. You must build projects to understand the console. However, for the Solutions Architect exam, I added a critical new layer: <strong>Forensic Practice Testing</strong>.</p>
+<p>I utilized <strong>Tutorials Dojo</strong> for practice exams, and they were vital. But I didn&rsquo;t just take the tests to see my score. I used them as a launchpad for study.</p>
+<ol>
+<li><strong>Take a timed exam.</strong></li>
+<li><strong>Review every single question</strong> (even the ones I got right).</li>
+<li><strong>The &ldquo;Why&rdquo; Analysis:</strong> If I got a question wrong, I didn&rsquo;t just memorize the right answer. I investigated <em>why</em> my answer was wrong and <em>why</em> the correct answer worked better in that specific scenario.</li>
+</ol>
+<h3 id="the-gemini-loop">The &ldquo;Gemini&rdquo; Loop</h3>
+<p>I also incorporated AI into my study loop. When I encountered a tricky comparison in a practice question (e.g., &ldquo;When exactly should I use Kinesis Data Streams vs. Kinesis Firehose?&rdquo;), I used <strong>Gemini</strong> to generate comparison tables and simple analogies. This combination of <strong>Great Learning</strong> for structure, <strong>Tutorials Dojo</strong> for depth, and <strong>Gemini</strong> for clarification was my winning tech stack.</p>
+<h2 id="summary">Summary</h2>
+<p>The Solutions Architect exam demands that you move beyond memorization and into application. You have to &ldquo;think&rdquo; like an architect. Focus on building highly available, fault-tolerant, and cost-optimized systems.</p>
+<p>If you are on this path, lean into the resources available. Don&rsquo;t just memorize the products; practice the scenarios.</p>
+
   </div>
 </section>
 
@@ -109,14 +147,8 @@
         
         <a class="menu-item" href="/posts">posts</a>
         
-        <span class="menu-item">&nbsp;|&nbsp;</span>
-        
       </li>
 
-      
-      <li class="menu-item">
-        <a class="menu-item" href="http://localhost:1313/posts/third/">next &gt;</a>
-      </li>
       
       
     </ul>

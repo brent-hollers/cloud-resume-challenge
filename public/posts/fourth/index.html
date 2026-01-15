@@ -13,7 +13,7 @@
         <meta name="keywords" content="minimalist,blog,goa,hugo,developer">
 
         <title>
-              Brent Hollers - My Fourth Post 
+              Brent Hollers - AWS Gotchas: ALBs vs NLBs and VPC Enpoints, What to know for the exam 
         </title>
 
         <meta name="generator" content="Hugo 0.154.2">
@@ -41,16 +41,16 @@
         <div class="container my-auto">
 
 <header class="text-start title">
-  <h1 class="title">My Fourth Post</h1>
+  <h1 class="title">AWS Gotchas: ALBs vs NLBs and VPC Enpoints, What to know for the exam</h1>
 </header>
 
 <section id="category-pane" class="meta">
   
   <div class="d-flex flex-column flex-md-row justify-content-between">
     <h6 class="text-start meta">
-       PUBLISHED ON FEB 1, 2024
+       PUBLISHED ON JAN 8, 2026
       
-      / 2 MIN READ
+      / 4 MIN READ
       
     </h6>
   </div>
@@ -62,29 +62,87 @@
     
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#introduction">Introduction</a></li>
-    <li><a href="#the-origin-of-the-pun">The Origin of the Pun</a></li>
-    <li><a href="#the-cultural-phenomenon">The Cultural Phenomenon</a></li>
-    <li><a href="#the-elaborate-joke">The Elaborate Joke</a></li>
-    <li><a href="#conclusion">Conclusion</a></li>
+    <li><a href="#1-alb-vs-nlb-the-receptionist-vs-the-bouncer">1. ALB vs. NLB: The &ldquo;Receptionist&rdquo; vs. The &ldquo;Bouncer&rdquo;</a>
+      <ul>
+        <li><a href="#the-application-load-balancer-alb-is-a-corporate-receptionist">The Application Load Balancer (ALB) is a Corporate Receptionist.</a></li>
+        <li><a href="#the-network-load-balancer-nlb-is-a-nightclub-bouncer">The Network Load Balancer (NLB) is a Nightclub Bouncer.</a></li>
+        <li><a href="#the-exam-hack-summary">The &ldquo;Exam Hack&rdquo; Summary</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-gateway-vs-interface-endpoints-the-map-vs-the-cable">2. Gateway vs. Interface Endpoints: The &ldquo;Map&rdquo; vs. The &ldquo;Cable&rdquo;</a>
+      <ul>
+        <li><a href="#gateway-endpoints-are-a-secret-tunnel-the-map-change">Gateway Endpoints are a &ldquo;Secret Tunnel&rdquo; (The Map Change)</a></li>
+        <li><a href="#interface-endpoints-are-a-private-phone-line-the-cable">Interface Endpoints are a &ldquo;Private Phone Line&rdquo; (The Cable)</a></li>
+        <li><a href="#the-exam-hack-summary-1">The &ldquo;Exam Hack&rdquo; Summary</a></li>
+        <li><a href="#visualizing-the-difference">Visualizing the Difference</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     
-    <h1 id="may-the-fourth-be-with-you-a-galactic-pun">May the Fourth Be with You: A Galactic Pun</h1>
-<h2 id="introduction">Introduction</h2>
-<p>Greetings, Earthlings and intergalactic travelers! Today, in my fourth post, we venture into a galaxy far, far away to explore a day cherished by rebels, Jedi, and starship enthusiasts alike — May the Fourth. Yes, you&rsquo;ve guessed it! It&rsquo;s the unofficial Star Wars Day, and we&rsquo;re here to unravel an elaborate joke that has transcended space and time.</p>
-<h2 id="the-origin-of-the-pun">The Origin of the Pun</h2>
-<p>It all started a long time ago in a galaxy&hellip; well, not too far away. The date was May 4, 1979, when Margaret Thatcher became the first woman Prime Minister of the United Kingdom. Her political party placed a congratulatory ad in the London Evening News that read, &ldquo;May the Fourth Be with You, Maggie. Congratulations.&rdquo; Little did they know, they had just coined a phrase that would become a rallying cry for Star Wars fans for decades to come.</p>
-<h2 id="the-cultural-phenomenon">The Cultural Phenomenon</h2>
-<p>Fast forward to the present, and May the Fourth has become a global phenomenon. It&rsquo;s a day when the force of puns is strong, and Star Wars fans worldwide unite in their love for the saga. From movie marathons and themed parties to epic cosplay and interstellar memes, the day is marked with great enthusiasm, as if millions of voices suddenly cry out in joy and are suddenly silenced by the start of a Star Wars marathon.</p>
-<h2 id="the-elaborate-joke">The Elaborate Joke</h2>
-<p>So, what makes &ldquo;May the Fourth Be with You&rdquo; an elaborate joke? It&rsquo;s the seamless blend of a historical date with pop culture, creating a pun that resonates across the universe. It plays on the iconic line, &ldquo;May the Force be with you,&rdquo; transforming it into a calendar-based quip that even Yoda would find amusing.</p>
-<p>Imagine Darth Vader walking into the Galactic Senate and, instead of force-choking someone for incompetence, he just proclaims, &ldquo;May the Fourth Be with You!&rdquo; and everyone just pauses, unsure whether to laugh or run for their lives.</p>
-<h2 id="conclusion">Conclusion</h2>
-<p>As the sun sets on our Star Wars Day celebrations, we realize that the spirit of May the Fourth goes beyond jokes and puns. It&rsquo;s a day that brings together fans, young and old, in their shared love for a saga that has shaped popular culture. It&rsquo;s about community, nostalgia, and the joy of being part of a universe that continues to inspire and amaze.</p>
-<p>So, as we wrap up this post, let&rsquo;s raise our lightsabers (or glow sticks, for the safety-conscious) and say, &ldquo;May the Fourth Be with You!&rdquo; - not just today, but every day in our journey through the stars.</p>
+    <p>Here is the third article, designed to cut through the jargon with the specific analogies I use when mentoring students for the SAA-C03.</p>
 <hr>
-<p>And remember, the next day is Revenge of the Fifth!</p>
+<h1 id="the-aws-architects-gotcha-list-two-concepts-that-trip-everyone-up">The AWS Architect’s &ldquo;Gotcha&rdquo; List: Two Concepts That Trip Everyone Up</h1>
+<p>When I sat for the Solutions Architect exam, I breezed through the questions on EC2 and RDS. But there were two specific areas where I found myself staring at the screen, second-guessing my answers.</p>
+<ol>
+<li><strong>ALB vs. NLB:</strong> &ldquo;Both balance load, so why does it matter?&rdquo;</li>
+<li><strong>VPC Endpoints:</strong> &ldquo;Why are there two types, and why is one free?&rdquo;</li>
+</ol>
+<p>These are the &ldquo;silent killers&rdquo; of the exam. They seem similar on the surface, but confusing them ensures a fail on scenario-based questions. Here is the simplest way to visualize them so you never mix them up again.</p>
+<h2 id="1-alb-vs-nlb-the-receptionist-vs-the-bouncer">1. ALB vs. NLB: The &ldquo;Receptionist&rdquo; vs. The &ldquo;Bouncer&rdquo;</h2>
+<p>To understand the difference, you have to stop thinking about &ldquo;servers&rdquo; and start thinking about how traffic is handled.</p>
+<h3 id="the-application-load-balancer-alb-is-a-corporate-receptionist">The Application Load Balancer (ALB) is a Corporate Receptionist.</h3>
+<p>Imagine walking into a high-end office building. You approach the receptionist (the ALB). She doesn&rsquo;t just wave you through; she asks you questions.</p>
+<ul>
+<li>&ldquo;Who are you here to see?&rdquo;</li>
+<li>&ldquo;Do you have an appointment?&rdquo;</li>
+<li>&ldquo;Are you looking for HR or Engineering?&rdquo;</li>
+</ul>
+<p>She looks at the specific details of your request (the HTTP headers, the URL path). If you ask for <code>/images</code>, she directs you to the marketing floor. If you ask for <code>/payroll</code>, she directs you to finance.</p>
+<ul>
+<li><strong>The Superpower:</strong> &ldquo;Intelligence.&rdquo; It operates at <strong>Layer 7</strong> (Application). It can route traffic based on content (e.g., sending mobile users to a different server than desktop users).</li>
+<li><strong>The Trade-off:</strong> She takes a split second to think. It’s slightly slower.</li>
+</ul>
+<h3 id="the-network-load-balancer-nlb-is-a-nightclub-bouncer">The Network Load Balancer (NLB) is a Nightclub Bouncer.</h3>
+<p>Now imagine a nightclub with a line of 10,000 people. The bouncer (the NLB) does not care who you are. He does not care if you want a drink or a dance. He only cares about one thing: <strong>Ticket Valid? Go.</strong></p>
+<ul>
+<li><strong>The Superpower:</strong> &ldquo;Speed.&rdquo; It operates at <strong>Layer 4</strong> (Transport). It doesn&rsquo;t look at the data; it just shuffles IP packets. It can handle <strong>millions of requests per second</strong> with ultra-low latency. It also provides a <strong>Static IP</strong>, which the Receptionist (ALB) cannot do.</li>
+<li><strong>The Trade-off:</strong> He is &ldquo;dumb.&rdquo; He cannot route based on your URL or headers.</li>
+</ul>
+<h3 id="the-exam-hack-summary">The &ldquo;Exam Hack&rdquo; Summary</h3>
+<ul>
+<li><strong>Scenario:</strong> &ldquo;Microservices,&rdquo; &ldquo;Path-based routing,&rdquo; &ldquo;HTTP/HTTPS,&rdquo; &ldquo;WAF integration.&rdquo; -&gt; <strong>Choose ALB.</strong></li>
+<li><strong>Scenario:</strong> &ldquo;Extreme performance,&rdquo; &ldquo;Millions of requests,&rdquo; &ldquo;Static IP required,&rdquo; &ldquo;UDP traffic,&rdquo; &ldquo;Gaming.&rdquo; -&gt; <strong>Choose NLB.</strong></li>
+</ul>
+<hr>
+<h2 id="2-gateway-vs-interface-endpoints-the-map-vs-the-cable">2. Gateway vs. Interface Endpoints: The &ldquo;Map&rdquo; vs. The &ldquo;Cable&rdquo;</h2>
+<p>This is the topic that causes the most lost points. Both endpoints do the same thing: they allow your private EC2 instances to talk to AWS services (like S3) without going over the public internet. But they work in completely different ways.</p>
+<h3 id="gateway-endpoints-are-a-secret-tunnel-the-map-change">Gateway Endpoints are a &ldquo;Secret Tunnel&rdquo; (The Map Change)</h3>
+<p>Imagine your VPC is a fortress. You want to get to the &ldquo;S3 Warehouse&rdquo; outside. You <em>could</em> go out the front gate (Internet Gateway), but that&rsquo;s dangerous.
+Instead, you just draw a new line on your map (Route Table) that says, &ldquo;If you are going to the Warehouse, take the secret tunnel.&rdquo;</p>
+<ul>
+<li><strong>How it works:</strong> It uses a <strong>Route Table</strong> entry. It does not exist as a physical device in your subnet.</li>
+<li><strong>The Catch:</strong> It <strong>ONLY</strong> works for <strong>S3</strong> and <strong>DynamoDB</strong>.</li>
+<li><strong>The Benefit:</strong> It is <strong>100% Free</strong>.</li>
+</ul>
+<h3 id="interface-endpoints-are-a-private-phone-line-the-cable">Interface Endpoints are a &ldquo;Private Phone Line&rdquo; (The Cable)</h3>
+<p>Now, imagine you want to talk to the &ldquo;SQS Department.&rdquo; There is no secret tunnel for them.
+Instead, you pay the phone company to install a dedicated red phone (Elastic Network Interface - ENI) right inside your office (Subnet). When you pick up that phone, it rings directly at the SQS department.</p>
+<ul>
+<li><strong>How it works:</strong> It injects an <strong>ENI</strong> (Elastic Network Interface) into your subnet. It uses a private IP address from your VPC range.</li>
+<li><strong>The Catch:</strong> It costs money (hourly fee + data processing fee).</li>
+<li><strong>The Benefit:</strong> It works with almost <strong>all other AWS services</strong> (SQS, SNS, Kinesis, etc.) and supports <strong>PrivateLink</strong> (connecting to other accounts).</li>
+</ul>
+<h3 id="the-exam-hack-summary-1">The &ldquo;Exam Hack&rdquo; Summary</h3>
+<ul>
+<li><strong>Scenario:</strong> &ldquo;Access S3 or DynamoDB,&rdquo; &ldquo;Lowest Cost,&rdquo; &ldquo;Route Table.&rdquo; -&gt; <strong>Choose Gateway Endpoint.</strong></li>
+<li><strong>Scenario:</strong> &ldquo;Access Kinesis/SQS/Athena,&rdquo; &ldquo;PrivateLink,&rdquo; &ldquo;Connect to a SaaS application,&rdquo; &ldquo;ENI.&rdquo; -&gt; <strong>Choose Interface Endpoint.</strong></li>
+</ul>
+<hr>
+<h3 id="visualizing-the-difference">Visualizing the Difference</h3>
+<p>To cement the &ldquo;Endpoint&rdquo; concept, this video provides a clear breakdown of when to pay for an Interface Endpoint versus when to use the free Gateway.</p>
+<p><a href="https://www.youtube.com/watch?v=Aw0MG99coCY">S3 Gateway Endpoint vs Interface Endpoint - Explained</a></p>
+<p>This video is relevant because it specifically addresses the cost and architecture trade-offs between the two endpoint types, which is a frequent &ldquo;distractor&rdquo; in exam questions.</p>
 
   </div>
 </section>
@@ -112,7 +170,7 @@
       
       
       <li class="menu-item">
-        <a class="menu-item" href="http://localhost:1313/posts/third/">&lt; prev</a>
+        <a class="menu-item" href="http://localhost:1313/posts/second/">&lt; prev</a>
       </li>
       
 

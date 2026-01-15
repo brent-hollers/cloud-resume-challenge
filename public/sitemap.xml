@@ -38,10 +38,13 @@
     <loc>http://localhost:1313/categories/projects/</loc>
     <lastmod>2026-01-06T22:55:05-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/fourth/</loc>
-    <lastmod>2024-02-01T04:56:02+05:30</lastmod>
+    <loc>http://localhost:1313/posts/first/</loc>
+    <lastmod>2025-11-22T07:07:07+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2025-11-22T07:07:07+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/fourth/</loc>
     <lastmod>2024-02-01T04:56:02+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/third/</loc>
@@ -49,8 +52,5 @@
   </url><url>
     <loc>http://localhost:1313/posts/second/</loc>
     <lastmod>2024-02-01T04:55:54+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/first/</loc>
-    <lastmod>2024-01-14T07:07:07+01:00</lastmod>
   </url>
 </urlset>

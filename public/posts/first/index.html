@@ -13,7 +13,7 @@
         <meta name="keywords" content="minimalist,blog,goa,hugo,developer">
 
         <title>
-              Brent Hollers - My First Post 
+              Brent Hollers - Cloud Certification Prep: AWS Cloud Practitioner 
         </title>
 
         <meta name="generator" content="Hugo 0.154.2">
@@ -41,16 +41,16 @@
         <div class="container my-auto">
 
 <header class="text-start title">
-  <h1 class="title">My First Post</h1>
+  <h1 class="title">Cloud Certification Prep: AWS Cloud Practitioner</h1>
 </header>
 
 <section id="category-pane" class="meta">
   
   <div class="d-flex flex-column flex-md-row justify-content-between">
     <h6 class="text-start meta">
-       PUBLISHED ON JAN 14, 2024
+       PUBLISHED ON NOV 22, 2025
       
-      / 5 MIN READ
+      / 4 MIN READ
       
     </h6>
   </div>
@@ -62,237 +62,91 @@
     
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#objective">Objective</a></li>
-    <li><a href="#the-scenario">The Scenario</a></li>
-    <li><a href="#the-solution-architecture">The Solution Architecture</a>
+    <li><a href="#the-strategy-build-document-showcase">The Strategy: &ldquo;Build, Document, Showcase&rdquo;</a></li>
+    <li><a href="#the-learning-path">The Learning Path</a>
       <ul>
-        <li><a href="#pre-requisites-lab-setup">Pre-Requisites (Lab Setup)</a></li>
-        <li><a href="#phase-1-lift--shift-migration">Phase 1: Lift &amp; Shift (Migration)</a></li>
-        <li><a href="#phase-2-modernization-refactor--replatform">Phase 2: Modernization (Refactor &amp; Replatform)</a></li>
+        <li><a href="#1-identity-and-access-management-iam">1. Identity and Access Management (IAM)</a></li>
+        <li><a href="#2-simple-storage-service-s3">2. Simple Storage Service (S3)</a></li>
+        <li><a href="#3-ec2-elastic-compute-cloud">3. EC2 (Elastic Compute Cloud)</a></li>
+        <li><a href="#4-networking-vpc">4. Networking (VPC)</a></li>
+        <li><a href="#5-billing-and-cost-management">5. Billing and Cost Management</a></li>
+        <li><a href="#6-load-balancing-and-auto-scaling">6. Load Balancing and Auto Scaling</a></li>
+        <li><a href="#7-managed-vs-client-managed-solutions">7. Managed vs. Client-Managed Solutions</a></li>
+        <li><a href="#8-containerization">8. Containerization</a></li>
+        <li><a href="#9-the-toolbox-services">9. The &ldquo;Toolbox&rdquo; Services</a></li>
+        <li><a href="#10-the-shared-responsibility-model">10. The Shared Responsibility Model</a></li>
+        <li><a href="#11-the-well-architected-framework">11. The Well-Architected Framework</a></li>
       </ul>
     </li>
-    <li><a href="#the-outcome">The Outcome</a></li>
-    <li><a href="#lessons-learned">Lessons Learned</a>
+    <li><a href="#summary">Summary</a>
       <ul>
-        <li><a href="#1-the-ghost-token-aws-cli-authentication">1. The &ldquo;Ghost Token&rdquo; (AWS CLI Authentication)</a></li>
-        <li><a href="#2-the-cross-account-supply-chain-trap">2. The Cross-Account Supply Chain Trap</a></li>
-        <li><a href="#3-terraform-module-versioning">3. Terraform Module Versioning</a></li>
-      </ul>
-    </li>
-    <li><a href="#future-improvements--roadmap">Future Improvements &amp; Roadmap</a>
-      <ul>
-        <li><a href="#1-implementation-of-cicd-pipelines">1. Implementation of CI/CD Pipelines</a></li>
-        <li><a href="#2-enhanced-observability-with-container-insights">2. Enhanced Observability with Container Insights</a></li>
-        <li><a href="#3-security-hardening--secrets-management">3. Security Hardening &amp; Secrets Management</a></li>
-        <li><a href="#4-cost-optimization-moving-to-fargate">4. Cost Optimization: Moving to Fargate</a></li>
+        <li><a href="#resources">Resources</a></li>
       </ul>
     </li>
   </ul>
 </nav>
     
-    <p>Here is the content of the attached document converted into Markdown format.</p>
-<p>From On-Prem to Cloud-Native: A Federal Migration &amp; Modernization Journey</p>
-<h2 id="objective">Objective</h2>
-<p>To develop a more concrete understanding of modernization and migration strategies for complex systems which also have specific security, resiliency, and accessibility requirements, I chose to simulate a realistic Federal Cloud Transformation scenario—migrating a legacy, stateful mission application from an on-premise data center to AWS, and subsequently refactoring it into a secure, scalable, cloud-native architecture on Kubernetes.</p>
-<h2 id="the-scenario">The Scenario</h2>
-<ul>
-<li></li>
-</ul>
-<p><strong>The Client:</strong> A federal agency is running a critical &ldquo;Mission Status&rdquo; application on aging on-premise hardware (Dell PowerEdge/VMware).</p>
-<ul>
-<li></li>
-</ul>
-<p><strong>The Mandate:</strong> The agency has a mandate to evacuate the data center (Cloud First Policy) and improve the application&rsquo;s security posture and scalability (Modernization).</p>
+    <p>Here is a draft of the article tailored to your specifications.</p>
 <hr>
-<h2 id="the-solution-architecture">The Solution Architecture</h2>
-<h3 id="pre-requisites-lab-setup">Pre-Requisites (Lab Setup)</h3>
-<p>To create a system that could be migrated, I first had to simulate an on-prem network, client, and database infrastructure.</p>
+<h1 id="how-to-crush-the-aws-cloud-practitioner-exam-a-strategic-approach">How to Crush the AWS Cloud Practitioner Exam: A Strategic Approach</h1>
+<p>The AWS Certified Cloud Practitioner (CLF-C02) is the starting line for many cloud journeys. Before diving into the technical weeds, it is important to understand what this exam actually is. It is a <strong>foundational</strong> exam, meaning it is not designed to test your ability to debug complex code or configure intricate firewall rules. Instead, it tests your understanding of high-level principles, the &ldquo;what&rdquo; and &ldquo;why&rdquo; of the AWS ecosystem, and the core concepts that drive cloud computing.</p>
+<p>In terms of difficulty, most candidates find it accessible, provided they respect the breadth of the material. The challenge isn&rsquo;t depth; it’s the sheer volume of vocabulary and services you need to recognize. You can expect questions that describe a business problem and ask you to identify the single AWS service that solves it.</p>
+<h2 id="the-strategy-build-document-showcase">The Strategy: &ldquo;Build, Document, Showcase&rdquo;</h2>
+<p>Passive learning—watching videos and reading whitepapers—is rarely enough to truly retain this information. The most effective strategy is to build small projects that test your knowledge as you go.</p>
+<p>This approach serves two purposes: it cements the concepts in your mind, and it builds a portfolio. As you complete these hands-on tasks, you should be documenting them.</p>
 <ul>
-<li></li>
+<li><strong>GitHub:</strong> Create a repository for your learning. Even if it’s just a screenshot of a configuration or a simple JSON policy file, commit it. This shows consistency and version control skills.</li>
+<li><strong>LinkedIn:</strong> Keep your profile updated. When you finish a module (like S3 or EC2), post a brief summary of the project you built to test that service.</li>
 </ul>
-<p><strong>Framework:</strong> I chose one of the more popular frameworks, a LAMP stack.</p>
+<p>This transforms your study time into &ldquo;career building&rdquo; time. You aren&rsquo;t just memorizing facts; you are creating a trail of evidence that proves you can do the work.</p>
+<h2 id="the-learning-path">The Learning Path</h2>
+<p>To avoid getting overwhelmed, you should tackle the services in a specific order that builds upon itself logically.</p>
+<h3 id="1-identity-and-access-management-iam">1. Identity and Access Management (IAM)</h3>
+<p>Start here. You cannot do anything securely in AWS without IAM. Focus on understanding <strong>IAM Roles</strong> versus Users. Learn how roles are assumed by services and how policies are applied to resources.</p>
 <ul>
-<li></li>
+<li><em>Project Idea:</em> Create a user with very limited permissions and try to access services they aren&rsquo;t allowed to use. Then, adjust the policy to grant access.</li>
 </ul>
-<p><strong>Network Security:</strong> I put this stack behind a network firewall using pfSense, as it is open-source and popular firewall software.</p>
+<h3 id="2-simple-storage-service-s3">2. Simple Storage Service (S3)</h3>
+<p>S3 is the backbone of the internet. Get comfortable creating buckets, uploading files, and understanding <strong>versioning</strong>.</p>
 <ul>
-<li></li>
+<li><em>Project Idea:</em> Host a static website on an S3 bucket.</li>
 </ul>
-<p><strong>Configuration:</strong> I had to create a port forwarding rule to access the pfSense interface from my local network since the server and the pfSense instance sit inside my local network on a separate subnet.</p>
+<h3 id="3-ec2-elastic-compute-cloud">3. EC2 (Elastic Compute Cloud)</h3>
+<p>Now that you have storage and identity, you need compute power. Learn how to launch a basic Linux or Windows instance, how to SSH/RDP into it, and how to install basic software.</p>
 <ul>
-<li></li>
+<li><em>Crucial Step:</em> Learn how to Stop and Terminate instances so you don&rsquo;t leave them running!</li>
 </ul>
-<p><strong>Client VM:</strong> Once pfSense was running with appropriate networking, I created an Ubuntu Server client VM to host the LAMP stack.</p>
+<h3 id="4-networking-vpc">4. Networking (VPC)</h3>
+<p>This is often the hardest hurdle. Move on to Virtual Private Clouds (VPCs). Understand the relationship between Subnets, Internet Gateways, and Route Tables. deeply understand <strong>Security Groups</strong> acting as virtual firewalls.</p>
 <ul>
-<li></li>
+<li><em>Project Idea:</em> Launch an EC2 instance in a custom VPC and try to access it from the internet.</li>
 </ul>
-<p><strong>Application:</strong> I built a simple web server that maintains a log of entries to simulate the local, on-premises legacy application.</p>
-<h3 id="phase-1-lift--shift-migration">Phase 1: Lift &amp; Shift (Migration)</h3>
-<p>The goal was to re-host the virtual machine to Amazon EC2 using <strong>AWS Application Migration Service (MGN)</strong> to ensure immediate continuity and data integrity.</p>
-<ul>
-<li></li>
-</ul>
-<p><strong>The Bridge:</strong> I established a &ldquo;bridge&rdquo; between the on-premise environment and the AWS Cloud using AWS MGN, which provides block-level replication.</p>
-<ul>
-<li></li>
-</ul>
-<p><strong>Source Environment:</strong> A VMware ESXi 6.7 host running on a Dell PowerEdge R420 server in my home lab.</p>
+<h3 id="5-billing-and-cost-management">5. Billing and Cost Management</h3>
+<p>Before you build anything larger, learn how to track costs. This is a massive part of the exam. Understand AWS Budgets, Cost Explorer, and Cost Allocation Tags.</p>
+<h3 id="6-load-balancing-and-auto-scaling">6. Load Balancing and Auto Scaling</h3>
+<p>Now, think about reliability. Learn how Elastic Load Balancers (ELB) distribute traffic and how Auto Scaling Groups (ASG) add or remove EC2 instances based on demand.</p>
+<h3 id="7-managed-vs-client-managed-solutions">7. Managed vs. Client-Managed Solutions</h3>
+<p>Shift your thinking to the &ldquo;types&rdquo; of services. Understand the trade-offs between managing your own database on EC2 (Client-Managed) versus using Amazon RDS (Fully Managed).</p>
+<h3 id="8-containerization">8. Containerization</h3>
+<p>You don&rsquo;t need to be a Docker expert, but you need to know the difference between <strong>ECS</strong> (Elastic Container Service) and <strong>EKS</strong> (Elastic Kubernetes Service), and when to use Fargate (serverless containers).</p>
+<h3 id="9-the-toolbox-services">9. The &ldquo;Toolbox&rdquo; Services</h3>
+<p>The remainder of your study should focus on memorizing the high-level function of specific utility services. Know what <strong>AWS Config</strong> records, what <strong>Amazon Macie</strong> protects (PII data), and what <strong>AWS Artifact</strong> provides (compliance reports).</p>
+<h3 id="10-the-shared-responsibility-model">10. The Shared Responsibility Model</h3>
+<p>You must memorize this diagram. Know exactly which security tasks AWS handles (Security <em>of</em> the Cloud) and which ones you handle (Security <em>in</em> the Cloud).</p>
+<h3 id="11-the-well-architected-framework">11. The Well-Architected Framework</h3>
+<p>Save this for <strong>last</strong>. It might seem counterintuitive, but the Well-Architected Framework is a lens through which you view the other services. It is impossible to understand the &ldquo;Cost Optimization&rdquo; or &ldquo;Operational Excellence&rdquo; pillars if you don&rsquo;t first understand the services (like EC2, S3, and Auto Scaling) that make those pillars possible.</p>
+<h2 id="summary">Summary</h2>
+<p>To pass the Cloud Practitioner exam, you need a broad, high-level understanding of the AWS product suite, but your deep dive should focus on <strong>Security (Shared Responsibility)</strong>, <strong>The Well-Architected Framework</strong>, and <strong>Billing</strong>. If you can master those three areas and have a functional knowledge of the core services described above, you will be well-prepared.</p>
+<h3 id="resources">Resources</h3>
 <ul>
 <li>
-<p><strong>The Process:</strong></p>
+<p><a href="https://d1.awsstatic.com/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Exam-Guide.pdf">Official AWS Certified Cloud Practitioner Exam Guide</a></p>
 </li>
 <li>
-<p>Installed the AWS Replication Agent on the source Linux machine.</p>
+<p><a href="https://www.youtube.com/watch?v=Uq5w1lnKzlk">Free AWS Cloud Practitioner Training Course</a></p>
 </li>
-<li>
-<p>The agent initiated a continuous block-level sync to the <code>us-east-1</code> region.</p>
-</li>
-<li>
-<p>Once the &ldquo;Data Replication Status&rdquo; reached &ldquo;Healthy,&rdquo; I launched a Test Instance in AWS.</p>
-</li>
-<li></li>
 </ul>
-<p><strong>Validation:</strong> Verified that the application state (the local SQLite database containing &ldquo;Mission Logs&rdquo;) migrated intact. This proved we could evacuate the data center rapidly without rewriting code.</p>
-<h3 id="phase-2-modernization-refactor--replatform">Phase 2: Modernization (Refactor &amp; Replatform)</h3>
-<p>With the application in the cloud, the next step was optimization, moving from a &ldquo;pet&rdquo; (long-lived VM) to &ldquo;cattle&rdquo; (ephemeral containers).</p>
-<h4 id="1-containerization--security">1. Containerization &amp; Security</h4>
-<p>I refactored the Python application into a Docker container.</p>
-<ul>
-<li></li>
-</ul>
-<p><strong>Compliance:</strong> In alignment with <strong>NIST 800-190</strong> (Application Container Security Guide), I ensured the container adhered to &ldquo;Least Privilege&rdquo; principles.</p>
-<ul>
-<li></li>
-</ul>
-<p><strong>Base Image:</strong> Used <code>python:3.9-slim</code> to minimize the attack surface.</p>
-<ul>
-<li></li>
-</ul>
-<p><strong>Non-Root User:</strong> Explicitly created a nonroot user (<code>uid: 5678</code>) to run application processes, preventing potential privilege escalation attacks.</p>
-<h4 id="2-infrastructure-as-code-terraform">2. Infrastructure as Code (Terraform)</h4>
-<p>I avoided manual console provisioning (&ldquo;ClickOps&rdquo;) in favor of <strong>Terraform</strong>, ensuring the infrastructure is reproducible and auditable.</p>
-<ul>
-<li></li>
-</ul>
-<p><strong>Network Isolation:</strong> Provisioned a VPC (<code>fed-demo-vpc</code>) with strict isolation—Worker Nodes in private subnets and Load Balancers in public subnets.</p>
-<ul>
-<li></li>
-</ul>
-<p><strong>EKS Cluster:</strong> Deployed an Amazon EKS cluster (<code>fed-modernization-cluster</code>) using the modern <code>terraform-aws-modules/eks/aws</code> v20 module.</p>
-<ul>
-<li></li>
-</ul>
-<p><strong>Cost Optimization:</strong> Configured the Node Group (<code>green_team</code>) to utilize <strong>EC2 Spot Instances</strong> (<code>capacity_type = &quot;SPOT&quot;</code>), reducing compute costs by approximately 70% compared to On-Demand pricing.</p>
-<h4 id="3-deployment--orchestration">3. Deployment &amp; Orchestration</h4>
-<p>The final deployment utilized Kubernetes manifests to manage the application lifecycle.</p>
-<ul>
-<li></li>
-</ul>
-<p><strong>Supply Chain:</strong> The Docker image was pushed to a private <strong>Amazon ECR</strong> repository within the same account to ensure secure, low-latency access.</p>
-<ul>
-<li></li>
-</ul>
-<p><strong>Availability:</strong> Deployed the application with a LoadBalancer service type, exposing the application securely on port 80 while the container listened on port 5000.</p>
-<hr>
-<h2 id="the-outcome">The Outcome</h2>
-<p>The legacy application is now fully modernized. It runs as a lightweight, secure container orchestrated by Kubernetes. It is self-healing, auto-scalable, and significantly cheaper to run than the original on-premises virtual machine.</p>
-<hr>
-<h2 id="lessons-learned">Lessons Learned</h2>
-<p>No migration is perfect. Here are the key technical challenges encountered and resolved during this project:</p>
-<h3 id="1-the-ghost-token-aws-cli-authentication">1. The &ldquo;Ghost Token&rdquo; (AWS CLI Authentication)</h3>
-<ul>
-<li></li>
-</ul>
-<p><strong>Issue:</strong> Terraform operations failed with <code>ExpiredToken</code> errors, even after updating credentials.</p>
-<ul>
-<li></li>
-</ul>
-<p><strong>Root Cause:</strong> The CLI environment was caching a temporary AWS SSO session token, which took precedence over the static IAM Access Keys I was trying to use.</p>
-<ul>
-<li></li>
-</ul>
-<p><strong>Fix:</strong> Performed a &ldquo;nuclear&rdquo; cleanup of the PowerShell environment (<code>Remove-Item Env:\AWS_SESSION_TOKEN</code>) to force the CLI to re-authenticate using the correct static profile.</p>
-<h3 id="2-the-cross-account-supply-chain-trap">2. The Cross-Account Supply Chain Trap</h3>
-<ul>
-<li></li>
-</ul>
-<p><strong>Issue:</strong> Kubernetes pods failed with <code>ImagePullBackOff</code>.</p>
-<ul>
-<li></li>
-</ul>
-<p><strong>Root Cause:</strong> The EKS cluster was in one AWS account, but I had initially pushed the Docker image to a registry in a different root account. By default, EKS cannot pull images from a different account&rsquo;s private registry.</p>
-<ul>
-<li></li>
-</ul>
-<p><strong>Fix:</strong> Adhering to the &ldquo;Data Gravity&rdquo; principle, I created a new ECR repository within the testing account and re-pushed the image.</p>
-<h3 id="3-terraform-module-versioning">3. Terraform Module Versioning</h3>
-<ul>
-<li></li>
-</ul>
-<p><strong>Issue:</strong> The initial Terraform plan failed due to unsupported block types (<code>elastic_gpu_specifications</code>).</p>
-<ul>
-<li></li>
-</ul>
-<p><strong>Root Cause:</strong> Attempted to use an older EKS module version with the newest AWS Provider (v5.x), which had deprecated specific features.</p>
-<ul>
-<li></li>
-</ul>
-<p><strong>Fix:</strong> Upgraded the EKS module to <code>~&gt; 20.0</code> and updated the <code>main.tf</code> configuration to align with the modern v20 schema.</p>
-<hr>
-<h2 id="future-improvements--roadmap">Future Improvements &amp; Roadmap</h2>
-<p>While this project demonstrated an MVP migration, the following areas were identified for evolution into an enterprise-grade environment.</p>
-<h3 id="1-implementation-of-cicd-pipelines">1. Implementation of CI/CD Pipelines</h3>
-<ul>
-<li></li>
-</ul>
-<p><strong>Current State:</strong> Container images are built locally and pushed manually.</p>
-<ul>
-<li></li>
-</ul>
-<p><strong>The Upgrade:</strong> Implement a fully automated CI/CD pipeline using AWS CodePipeline and CodeBuild (or GitHub Actions).</p>
-<ul>
-<li></li>
-</ul>
-<p><strong>Goal:</strong> Any commit to the main branch triggers an automated build, scan, and rolling update.</p>
-<h3 id="2-enhanced-observability-with-container-insights">2. Enhanced Observability with Container Insights</h3>
-<ul>
-<li></li>
-</ul>
-<p><strong>Current State:</strong> Monitoring is limited to basic EC2 metrics and CLI status checks.</p>
-<ul>
-<li></li>
-</ul>
-<p><strong>The Upgrade:</strong> Enable CloudWatch Container Insights or deploy a Prometheus/Grafana stack.</p>
-<ul>
-<li></li>
-</ul>
-<p><strong>Goal:</strong> Gain granular visibility into pod-level metrics and centralized logging.</p>
-<h3 id="3-security-hardening--secrets-management">3. Security Hardening &amp; Secrets Management</h3>
-<ul>
-<li></li>
-</ul>
-<p><strong>Current State:</strong> Environment variables are injected directly via Kubernetes manifests.</p>
-<ul>
-<li></li>
-</ul>
-<p><strong>The Upgrade:</strong> Integrate AWS Secrets Manager using the AWS Secrets and Configuration Provider (ASCP).</p>
-<ul>
-<li></li>
-</ul>
-<p><strong>Goal:</strong> Rotate and retrieve credentials programmatically at runtime without exposing them in plain text.</p>
-<h3 id="4-cost-optimization-moving-to-fargate">4. Cost Optimization: Moving to Fargate</h3>
-<ul>
-<li></li>
-</ul>
-<p><strong>Current State:</strong> Application runs on managed EC2 Node Groups.</p>
-<ul>
-<li></li>
-</ul>
-<p><strong>The Upgrade:</strong> Migrating the data plane to AWS Fargate for EKS.</p>
-<ul>
-<li></li>
-</ul>
-<p><strong>Goal:</strong> Run pods without managing underlying EC2 servers to reduce operational overhead.</p>
+<p>This video is an excellent comprehensive resource that covers the entire CLF-C02 curriculum and aligns well with the learning path described in the article.</p>
 
   </div>
 </section>
@@ -319,8 +173,14 @@
     <ul class="pagination justify-content-center">
       
       
+      <li class="menu-item">
+        <a class="menu-item" href="http://localhost:1313/posts/third/">&lt; prev</a>
+      </li>
+      
 
       <li class="menu-item">
+        
+        <span class="menu-item">&nbsp;|&nbsp;</span>
         
         <a class="menu-item" href="/posts">posts</a>
         
