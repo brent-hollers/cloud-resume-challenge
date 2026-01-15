@@ -4,10 +4,6 @@ date = 2026-01-08T04:56:02+05:30
 draft = false
 +++
 
-Here is the third article, designed to cut through the jargon with the specific analogies I use when mentoring students for the SAA-C03.
-
----
-
 # The AWS Architect’s "Gotcha" List: Two Concepts That Trip Everyone Up
 
 When I sat for the Solutions Architect exam, I breezed through the questions on EC2 and RDS. But there were two specific areas where I found myself staring at the screen, second-guessing my answers.

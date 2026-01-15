@@ -4,10 +4,6 @@ date = 2026-01-02T04:55:54+05:30
 draft = false
 +++
 
-Here is a draft of the follow-up article, shifted to a first-person perspective to incorporate your personal experiences with the specific programs and mentors you mentioned.
-
----
-
 # Leveling Up: My Journey to the AWS Solutions Architect Associate
 
 If the AWS Cloud Practitioner exam is the "what" of the cloud, the AWS Certified Solutions Architect – Associate (SAA-C03) is emphatically the "how" and the "why."
