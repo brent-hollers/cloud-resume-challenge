@@ -1,7 +1,7 @@
 ---
-title: "Building Secure, Modular Infrastructure with Terraform"
+title: "IaC Part 2: Building Secure, Modular Infrastructure with Terraform"
 subtitle: "Building Production-Grade Infrastructure - Part 2 of 4"
-date: 2026-02-19
+date: 2026-02-16
 author: Dr. Brent Hollers
 tags: [Terraform, AWS, VPC, Security, IaC, DevOps, Cloud Architecture]
 series: "Building Production-Grade Infrastructure"

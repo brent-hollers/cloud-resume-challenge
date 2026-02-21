@@ -1,7 +1,7 @@
 ---
-title: "Lessons Learned: Cost, Challenges, and What's Next"
+title: "IaC Part 4: Lessons Learned: Cost, Challenges, and What's Next"
 subtitle: "Building Production-Grade Infrastructure - Part 4 of 4"
-date: 2026-02-19
+date: 2026-02-18
 author: Dr. Brent Hollers
 tags: [DevOps, Lessons Learned, Cost Optimization, Infrastructure, Best Practices]
 series: "Building Production-Grade Infrastructure"

@@ -1,7 +1,7 @@
 ---
-title: "Automating Everything: CI/CD, Monitoring, and Workflows"
+title: "IaC Part 3: Automating Everything: CI/CD, Monitoring, and Workflows"
 subtitle: "Building Production-Grade Infrastructure - Part 3 of 4"
-date: 2026-02-19
+date: 2026-02-17
 author: Dr. Brent Hollers
 tags: [DevOps, CI/CD, CloudWatch, Monitoring, SRE, GitHub Actions, OIDC, Automation]
 series: "Building Production-Grade Infrastructure"

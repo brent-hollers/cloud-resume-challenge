@@ -1,7 +1,7 @@
 ---
-title: "From Manual Chaos to Infrastructure as Code: Designing a School Absence System"
+title: "IaC Part 1: From Manual Chaos to Infrastructure as Code: Designing a School Absence System"
 subtitle: "Building Production-Grade Infrastructure - Part 1 of 4"
-date: 2026-02-19
+date: 2026-02-15
 author: Dr. Brent Hollers
 tags: [DevOps, Infrastructure as Code, Terraform, AWS, System Design]
 series: "Building Production-Grade Infrastructure"
