@@ -70,4 +70,14 @@ url = "projects/"
 name = "resume"
 identifier = "resume"
 weight = 400
-url = "/resume.pdf"
+url = "resume/"
+[[menu.main]]
+name = "consulting"
+identifier = "consulting"
+weight = 350
+url = "consulting/"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Brent Hollers, Ph.D. — Technical Program Manager, AWS Cloud Architect, Data Scientist">
+    <title>Brent Hollers - Resume</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+
+    <style>
+    /* Resume-specific styles */
+    .resume-actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 0.75rem;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+    }
+    .resume-actions a {
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.78rem;
+        font-weight: 500;
+        padding: 0.4rem 1.1rem;
+        border-radius: 3px;
+        text-decoration: none !important;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+    .btn-dl { background: #1B2A6B; color: white !important; }
+    .btn-pr { background: transparent; color: #1B2A6B !important; border: 1px solid #1B2A6B; }
+
+    .r-header {
+        border-bottom: 3px solid #1B2A6B;
+        padding-bottom: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    .r-name {
+        font-family: 'Roboto Slab', serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #1B2A6B;
+        margin: 0 0 0.2rem;
+    }
+    .r-subtitle {
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.88rem;
+        color: #666;
+        font-weight: 300;
+        margin: 0 0 0.6rem;
+    }
+    .r-contact {
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.82rem;
+        color: #888;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.25rem 1.25rem;
+    }
+    .r-contact a { color: #888 !important; text-decoration: none !important; }
+
+    .r-sec { margin-bottom: 1.75rem; }
+    .r-sec-title {
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: #1B2A6B;
+        border-bottom: 1px solid #dde3f5;
+        padding-bottom: 0.3rem;
+        margin-bottom: 0.9rem;
+    }
+    .r-summary {
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.9rem;
+        color: #555;
+        font-weight: 300;
+        line-height: 1.7;
+    }
+
+    /* Outcomes */
+    .outcomes-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.6rem;
+    }
+    @media (max-width: 500px) { .outcomes-grid { grid-template-columns: 1fr; } }
+    .outcome-pill {
+        background: #E8F0FE;
+        border-left: 3px solid #1B2A6B;
+        padding: 0.5rem 0.75rem;
+        border-radius: 0 3px 3px 0;
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.83rem;
+        color: #333;
+        font-weight: 300;
+    }
+    .outcome-pill strong { color: #1B2A6B; font-weight: 700; }
+
+    /* Job entries */
+    .r-job { margin-bottom: 1.5rem; }
+    .r-job-hdr {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 0.2rem;
+    }
+    .r-job-title {
+        font-family: 'Roboto Slab', serif;
+        font-size: 0.97rem;
+        font-weight: 700;
+        color: #222;
+    }
+    .r-job-dates {
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.8rem;
+        color: #999;
+        white-space: nowrap;
+    }
+    .r-job-org {
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.85rem;
+        color: #777;
+        font-style: italic;
+        margin-bottom: 0.5rem;
+    }
+    .r-sub {
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: #1B2A6B;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        margin: 0.75rem 0 0.35rem;
+    }
+    .r-ul { list-style: none; margin: 0; padding: 0; }
+    .r-ul li {
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.85rem;
+        color: #555;
+        font-weight: 300;
+        padding: 0.2rem 0 0.2rem 1.1rem;
+        position: relative;
+        line-height: 1.6;
+    }
+    .r-ul li::before { content: '→'; position: absolute; left: 0; color: #1B2A6B; font-size: 0.78rem; top: 0.28rem; }
+
+    /* Prior */
+    .prior-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 0.35rem 0;
+        border-bottom: 1px dotted #e0e0e0;
+        flex-wrap: wrap;
+        gap: 0.2rem;
+    }
+    .prior-title { font-family: 'Roboto', sans-serif; font-size: 0.85rem; font-weight: 500; color: #333; }
+    .prior-org { font-family: 'Roboto', sans-serif; font-size: 0.8rem; color: #888; font-style: italic; }
+    .prior-dates { font-family: 'Roboto', sans-serif; font-size: 0.78rem; color: #aaa; }
+
+    /* Skills */
+    .skills-tbl { width: 100%; border-collapse: collapse; }
+    .skills-tbl td {
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.83rem;
+        padding: 0.38rem 0.5rem;
+        vertical-align: top;
+        border-bottom: 1px solid #f0f0f0;
+        color: #555;
+        font-weight: 300;
+        line-height: 1.55;
+    }
+    .skills-tbl td:first-child {
+        font-weight: 700;
+        color: #1B2A6B;
+        white-space: nowrap;
+        width: 20%;
+        padding-right: 1rem;
+    }
+
+    /* Education */
+    .edu-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 0.45rem 0;
+        border-bottom: 1px solid #f0f0f0;
+        flex-wrap: wrap;
+        gap: 0.2rem;
+    }
+    .edu-deg { font-family: 'Roboto', sans-serif; font-size: 0.88rem; font-weight: 600; color: #222; }
+    .edu-inst { font-family: 'Roboto', sans-serif; font-size: 0.82rem; color: #888; font-style: italic; }
+
+    /* Certs */
+    .certs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.45rem; }
+    @media (max-width: 500px) { .certs-grid { grid-template-columns: 1fr; } }
+    .cert-item {
+        display: flex;
+        align-items: center;
+        gap: 0.45rem;
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.83rem;
+        color: #444;
+        font-weight: 300;
+    }
+    .badge-active { background: rgba(13,122,95,0.12); color: #0D7A5F; font-size: 0.68rem; font-weight: 700; padding: 0.12rem 0.45rem; border-radius: 2px; white-space: nowrap; }
+    .badge-prog { background: rgba(27,42,107,0.1); color: #1B2A6B; font-size: 0.68rem; font-weight: 700; padding: 0.12rem 0.45rem; border-radius: 2px; white-space: nowrap; }
+
+    @media print {
+        .resume-actions, #menu-pane, footer { display: none !important; }
+    }
+    </style>
+</head>
+<body lang="en-US">
+<div class="container my-auto">
+
+<header class="text-start title">
+    <h1 class="title">Resume</h1>
+</header>
+
+<section id="content-pane">
+<div class="text-justify content">
+
+<div class="resume-actions">
+    <a href="/resume.pdf" class="btn-dl" download>⬇ Download PDF</a>
+    <a href="javascript:window.print()" class="btn-pr">🖨 Print</a>
+</div>
+
+<!-- HEADER -->
+<div class="r-header">
+    <div class="r-name">BRENT HOLLERS, Ph.D.</div>
+    <div class="r-subtitle">Technical Program Manager &nbsp;·&nbsp; Cloud Infrastructure &nbsp;·&nbsp; IT Security &nbsp;·&nbsp; AWS Certified Solutions Architect</div>
+    <div class="r-contact">
+        <span>Sharpsburg, GA 30277</span>
+        <a href="https://linkedin.com/in/brenthollers">linkedin.com/in/brenthollers</a>
+        <a href="https://www.brenthollers.com">brenthollers.com</a>
+        <a href="https://github.com/brent-hollers">github.com/brent-hollers</a>
+    </div>
+</div>
+
+<!-- SUMMARY -->
+<div class="r-sec">
+    <div class="r-sec-title">Professional Summary</div>
+    <p class="r-summary">Technical Program Manager with 5+ years of end-to-end program ownership across cloud infrastructure, network architecture, cybersecurity, and software delivery — managing concurrent workstreams, cross-functional stakeholders, budgets, and vendor relationships with full accountability for outcomes. Delivered $250K+ in cost savings, achieved STEM accreditation 4 years ahead of schedule, and built production AWS infrastructure using Terraform, GitHub Actions CI/CD, EC2, RDS, Lambda, S3, CloudFront, Glue, Athena, and EventBridge. AWS Certified Solutions Architect – Associate. PMP and CompTIA Security+ in progress.</p>
+</div>
+
+<!-- KEY OUTCOMES -->
+<div class="r-sec">
+    <div class="r-sec-title">Key Program Outcomes</div>
+    <div class="outcomes-grid">
+        <div class="outcome-pill"><strong>$250K+</strong> in cost savings through vendor optimization and infrastructure redesign</div>
+        <div class="outcome-pill"><strong>$66K+</strong> cost-avoidance through competitive vendor analysis and solution design</div>
+        <div class="outcome-pill"><strong>Zero</strong> missed purchase orders or late invoices since PO system go-live</div>
+        <div class="outcome-pill"><strong>Zero</strong> unplanned network outages following complete infrastructure rebuild</div>
+        <div class="outcome-pill"><strong>STEM accreditation</strong> achieved in 2 years vs. 6-year standard timeline</div>
+        <div class="outcome-pill"><strong>20+</strong> Archdiocesan IT leaders trained through semi-annual workshops</div>
+    </div>
+</div>
+
+<!-- EXPERIENCE -->
+<div class="r-sec">
+    <div class="r-sec-title">Professional Experience</div>
+
+    <div class="r-job">
+        <div class="r-job-hdr">
+            <div class="r-job-title">Director of Information Technology</div>
+            <div class="r-job-dates">2020 – Present</div>
+        </div>
+        <div class="r-job-org">St. Mary's Academy &nbsp;·&nbsp; Sharpsburg, GA</div>
+
+        <div class="r-sub">Program & Project Delivery</div>
+        <ul class="r-ul">
+            <li>Owned end-to-end program management of 10+ concurrent technology initiatives — defining scope, building project plans, managing budgets, tracking milestones and dependencies, identifying risks, and communicating status to executive and board stakeholders.</li>
+            <li>Designed and delivered a self-sustaining 1:1 device program for 500+ students and staff — developing a novel $20/month financing model, securing approval through financial analysis demonstrating full cost recovery by year two.</li>
+            <li>Led a cross-functional STEM accreditation program from concept through certification in two years — securing acceptance into the Notre Dame STEM Fellows program and negotiating a special exception to waive the standard six-year timeline.</li>
+            <li>Evaluated and recommended a $66K+ cost-avoidance solution for intercom infrastructure replacement — conducting competitive vendor analysis, producing a risk register and cost-benefit model approved over the incumbent vendor proposal.</li>
+            <li>Orchestrated semi-annual Technology Directors' Workshops for 20+ institutional leaders across the Archdiocese — leading collaborative development of AI policy frameworks, device selection standards, and network architecture guidelines.</li>
+        </ul>
+
+        <div class="r-sub">Cloud Infrastructure & Engineering</div>
+        <ul class="r-ul">
+            <li>Designed and provisioned production AWS infrastructure using Terraform IaC — maintaining modular, version-controlled configurations with GitHub Actions CI/CD pipelines for automated plan/apply deployment workflows.</li>
+            <li>Designed and delivered a fully automated Purchase Order Management System on AWS (Route 53, CloudFront, ALB, EC2, VPC, Lambda, n8n) with Google Sign-In authentication and three-stage approval workflow — zero missed orders and zero late invoices since go-live.</li>
+            <li>Delivered a staff absence management system on AWS (EC2, ALB, CloudFront, RDS, Secrets Manager, Google OAuth) — managing full project lifecycle from requirements through production deployment.</li>
+            <li>Built SchoolSight, an AI-powered enrollment intelligence platform — orchestrating S3, Glue, Athena, Lambda, and EventBridge to ingest Census ACS data, execute geographic scoring models in Python, and map 44 competitor schools via Google Places API.</li>
+            <li>Executed a complete network infrastructure rebuild — replacing aging flat-network architecture with a segmented Unifi-based VLAN environment and deploying a caching DNS resolver on AWS Lightsail using Unbound.</li>
+        </ul>
+
+        <div class="r-sub">Security & Compliance</div>
+        <ul class="r-ul">
+            <li>Implemented Azure AD/Entra ID Conditional Access policies, Intune device compliance baselines, Microsoft Defender endpoint protection, AWS IAM least-privilege policies, CloudTrail audit logging, and KMS encryption across all production workloads.</li>
+            <li>Ensured FERPA and COPPA compliance across all technology initiatives — coordinating policy documentation, vendor data agreements, audit evidence collection, and staff training.</li>
+            <li>Administered Azure AD/Entra ID, Google Workspace, Microsoft 365, Intune, SharePoint, and OneDrive for 500+ users across a multi-platform ecosystem.</li>
+        </ul>
+    </div>
+
+    <div class="r-sub" style="margin-top:1.25rem;">Prior Experience</div>
+    <div class="prior-row">
+        <div><div class="prior-title">Cybersecurity Instructor</div><div class="prior-org">Cherokee County School District &nbsp;·&nbsp; Canton, GA</div></div>
+        <div class="prior-dates">2017 – 2020</div>
+    </div>
+    <div class="prior-row">
+        <div><div class="prior-title">Instructional Technologist & Department Chair</div><div class="prior-org">Blessed Trinity High School &nbsp;·&nbsp; Roswell, GA</div></div>
+        <div class="prior-dates">2006 – 2017</div>
+    </div>
+</div>
+
+<!-- EDUCATION -->
+<div class="r-sec">
+    <div class="r-sec-title">Education</div>
+    <div class="edu-row"><div class="edu-deg">Ph.D., Workforce Education and Development</div><div class="edu-inst">University of Georgia &nbsp;·&nbsp; 2015–2017</div></div>
+    <div class="edu-row"><div class="edu-deg">M.S., Data Science</div><div class="edu-inst">Eastern University &nbsp;·&nbsp; 2018</div></div>
+    <div class="edu-row"><div class="edu-deg">B.B.A., Accounting</div><div class="edu-inst">University of North Georgia &nbsp;·&nbsp; 2002–2006</div></div>
+    <div class="edu-row"><div class="edu-deg">Postgraduate Certificate, Cloud Architecture</div><div class="edu-inst">University of Texas at Austin &nbsp;·&nbsp; 2025</div></div>
+</div>
+
+<!-- CERTIFICATIONS -->
+<div class="r-sec">
+    <div class="r-sec-title">Certifications</div>
+    <div class="certs-grid">
+        <div class="cert-item"><span class="badge-active">ACTIVE</span> AWS Certified Solutions Architect – Associate</div>
+        <div class="cert-item"><span class="badge-active">ACTIVE</span> AWS Certified Cloud Practitioner</div>
+        <div class="cert-item"><span class="badge-active">ACTIVE</span> Google Cybersecurity Certificate V2 (Coursera)</div>
+        <div class="cert-item"><span class="badge-prog">IN PROGRESS</span> PMP (PMI)</div>
+        <div class="cert-item"><span class="badge-prog">IN PROGRESS</span> CompTIA Security+</div>
+        <div class="cert-item"><span class="badge-prog">IN PROGRESS</span> Terraform Associate 004 (HashiCorp)</div>
+    </div>
+</div>
+
+<!-- TECHNICAL SKILLS -->
+<div class="r-sec">
+    <div class="r-sec-title">Technical Skills</div>
+    <table class="skills-tbl">
+        <tr><td>Cloud & AWS</td><td>EC2, ALB, CloudFront, S3, RDS, IAM, Secrets Manager, KMS, Lambda, Glue, Athena, EventBridge, API Gateway, CloudWatch, CloudTrail, Route 53, VPC — AWS Certified SA; GCP (production)</td></tr>
+        <tr><td>AI & Emerging</td><td>Amazon Bedrock, Generative AI, RAG, Agentic AI (study); Claude, ChatGPT, Gemini, Kiro, Cursor — daily production use</td></tr>
+        <tr><td>DevOps & IaC</td><td>Terraform (production), GitHub Actions CI/CD, Git, Docker (familiar), Kubernetes/EKS (familiar), n8n workflow automation</td></tr>
+        <tr><td>Security</td><td>Azure AD/Entra ID, Conditional Access, Intune, Defender, MFA, IAM, VPN, VLAN, pfSense, Unifi, FERPA, COPPA</td></tr>
+        <tr><td>Data & Analytics</td><td>Python, SQL (PostgreSQL, MySQL), AWS Glue/Athena pipelines, ArcGIS, GIS — M.S. Data Science; Pandas, Scikit-Learn, TensorFlow, Keras (coursework)</td></tr>
+        <tr><td>Monitoring</td><td>Datadog (production), AWS CloudWatch, CloudTrail</td></tr>
+        <tr><td>Languages</td><td>Python, SQL, Java, Bash, JavaScript (familiar)</td></tr>
+        <tr><td>PM & Collab</td><td>Agile, Scrum, Kanban, risk registers, Asana, Google Workspace, Microsoft 365, Slack/Teams</td></tr>
+        <tr><td>Networking</td><td>DNS, IPsec VPN, VLANs, Unifi UDM Pro, pfSense, MTU/NAT troubleshooting, Unbound DNS</td></tr>
+    </table>
+</div>
+
+</div>
+</section>
+
+<section id="menu-pane" class="menu text-center">
+    <h4 class="text-center mt-3"><a class="menu-item" href="/">home</a></h4>
+</section>
+
+<footer class="text-center footer">
+    <hr />
+    <h6 class="text-center copyright">© 2026. Brent Hollers. All Rights Reserved.</h6>
+    <h6 class="text-center powered">
+        <a href="https://gohugo.io/">Hugo</a>
+        <a href="https://github.com/shenoydotme/hugo-goa">Goa</a> by
+        <a href="https://shenoy.me">shenoydotme</a> and
+        <a href="https://incirclemedia.com">Incircle Media</a>
+    </h6>
+</footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="/js/custom.js"></script>
+</body>
+</html>

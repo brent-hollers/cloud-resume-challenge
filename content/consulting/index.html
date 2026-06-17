@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Independent technology consulting — AI implementation, AWS cloud infrastructure, data pipelines, and technology strategy.">
+    <title>Brent Hollers - Consulting Services</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+
+    <style>
+    .c-hero {
+        background: linear-gradient(135deg, #1B2A6B 0%, #2E4482 60%, #3A5AA0 100%);
+        color: white;
+        padding: 2rem 1.75rem;
+        border-radius: 5px;
+        margin-bottom: 1.75rem;
+        text-align: center;
+    }
+    .c-hero h2 {
+        font-family: 'Roboto Slab', serif;
+        font-size: 1.55rem;
+        font-weight: 400;
+        margin-bottom: 0.65rem;
+        line-height: 1.35;
+    }
+    .c-hero p {
+        font-family: 'Roboto', sans-serif;
+        color: rgba(255,255,255,0.8);
+        font-size: 0.9rem;
+        font-weight: 300;
+        max-width: 520px;
+        margin: 0 auto 1.25rem;
+        line-height: 1.6;
+    }
+    .c-hero a {
+        display: inline-block;
+        background: white;
+        color: #1B2A6B !important;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 0.85rem;
+        padding: 0.6rem 1.75rem;
+        border-radius: 3px;
+        text-decoration: none !important;
+        letter-spacing: 0.03em;
+    }
+    .creds {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem 1.25rem;
+        justify-content: center;
+        margin-bottom: 1.75rem;
+        padding: 0.85rem 1rem;
+        background: #f8f9ff;
+        border: 1px solid #e0e6f8;
+        border-radius: 4px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.8rem;
+        color: #666;
+        font-weight: 300;
+    }
+    .creds span::before { content: '· '; color: #1B2A6B; font-weight: 700; }
+
+    .c-sec { margin-bottom: 1.75rem; }
+    .c-sec-title {
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: #1B2A6B;
+        border-bottom: 1px solid #dde3f5;
+        padding-bottom: 0.3rem;
+        margin-bottom: 0.9rem;
+    }
+    .c-intro {
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.9rem;
+        color: #555;
+        font-weight: 300;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+    }
+
+    /* Service cards */
+    .svc-card {
+        border: 1px solid #e0e6f8;
+        border-radius: 4px;
+        padding: 1.25rem;
+        margin-bottom: 1rem;
+        background: white;
+    }
+    .svc-card.featured { border-color: #1B2A6B; background: #E8F0FE; }
+    .svc-card h4 {
+        font-family: 'Roboto Slab', serif;
+        font-size: 0.97rem;
+        color: #1B2A6B;
+        margin-bottom: 0.4rem;
+    }
+    .svc-card .desc {
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.85rem;
+        color: #666;
+        font-style: italic;
+        font-weight: 300;
+        margin-bottom: 0.65rem;
+        line-height: 1.6;
+    }
+    .svc-card ul { margin: 0 0 0.65rem 1.1rem; padding: 0; }
+    .svc-card ul li {
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.83rem;
+        color: #444;
+        font-weight: 300;
+        margin-bottom: 0.2rem;
+        line-height: 1.5;
+    }
+    .rate {
+        display: inline-block;
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: #0D7A5F;
+        background: rgba(13,122,95,0.08);
+        padding: 0.15rem 0.5rem;
+        border-radius: 2px;
+    }
+
+    /* Outcomes */
+    .out-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.75rem;
+        margin-bottom: 0.5rem;
+    }
+    @media (max-width: 600px) { .out-grid { grid-template-columns: 1fr 1fr; } }
+    .out-box {
+        background: #1B2A6B;
+        color: white;
+        border-radius: 4px;
+        padding: 1rem;
+        text-align: center;
+    }
+    .out-num {
+        font-family: 'Roboto Slab', serif;
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 0.35rem;
+    }
+    .out-lbl {
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.75rem;
+        color: rgba(255,255,255,0.7);
+        font-weight: 300;
+        line-height: 1.4;
+    }
+
+    /* Who */
+    .who-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.75rem;
+        margin-top: 0.5rem;
+    }
+    @media (max-width: 600px) { .who-grid { grid-template-columns: 1fr; } }
+    .who-card {
+        border: 1px solid #e0e6f8;
+        border-radius: 4px;
+        padding: 1rem;
+        background: white;
+    }
+    .who-card h5 {
+        font-family: 'Roboto Slab', serif;
+        font-size: 0.88rem;
+        color: #1B2A6B;
+        margin-bottom: 0.35rem;
+    }
+    .who-card p {
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.82rem;
+        color: #666;
+        font-weight: 300;
+        line-height: 1.55;
+        margin: 0;
+    }
+
+    /* Process */
+    .proc-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+        margin-top: 0.5rem;
+    }
+    @media (max-width: 500px) { .proc-grid { grid-template-columns: 1fr; } }
+    .proc-step {
+        padding: 1rem;
+        background: #E8F0FE;
+        border-radius: 4px;
+    }
+    .proc-num { font-family: 'Roboto', sans-serif; font-size: 0.7rem; font-weight: 700; color: #1B2A6B; letter-spacing: 0.1em; }
+    .proc-title { font-family: 'Roboto Slab', serif; font-size: 0.88rem; color: #1B2A6B; margin: 0.2rem 0; }
+    .proc-desc { font-family: 'Roboto', sans-serif; font-size: 0.82rem; color: #666; font-weight: 300; line-height: 1.5; }
+
+    /* Contact */
+    .c-contact {
+        background: #1B2A6B;
+        color: white;
+        border-radius: 5px;
+        padding: 1.75rem;
+        text-align: center;
+        margin-top: 1.75rem;
+    }
+    .c-contact h4 {
+        font-family: 'Roboto Slab', serif;
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin-bottom: 0.65rem;
+    }
+    .c-contact p {
+        font-family: 'Roboto', sans-serif;
+        color: rgba(255,255,255,0.75);
+        font-size: 0.88rem;
+        font-weight: 300;
+        margin-bottom: 1.1rem;
+    }
+    .c-contact a.btn-w {
+        display: inline-block;
+        background: white;
+        color: #1B2A6B !important;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 0.85rem;
+        padding: 0.6rem 1.75rem;
+        border-radius: 3px;
+        text-decoration: none !important;
+        margin: 0.25rem;
+    }
+    .c-contact a.btn-o {
+        display: inline-block;
+        background: transparent;
+        color: white !important;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 0.85rem;
+        padding: 0.6rem 1.75rem;
+        border-radius: 3px;
+        text-decoration: none !important;
+        border: 2px solid rgba(255,255,255,0.6);
+        margin: 0.25rem;
+    }
+    </style>
+</head>
+<body lang="en-US">
+<div class="container my-auto">
+
+<header class="text-start title">
+    <h1 class="title">Consulting Services</h1>
+</header>
+
+<section id="content-pane">
+<div class="text-justify content">
+
+<div class="c-hero">
+    <h2>Senior-level technology expertise.<br>Results you can measure.</h2>
+    <p>I help small businesses, non-profits, and schools solve their hardest technology problems — with production-grade quality and clear business outcomes.</p>
+    <a href="mailto:drhollers@gmail.com">Schedule a Free Consultation</a>
+</div>
+
+<div class="creds">
+    <span>Ph.D., Workforce Education</span>
+    <span>M.S., Data Science</span>
+    <span>AWS Certified Solutions Architect</span>
+    <span>Google Cybersecurity Certificate</span>
+    <span>19 Years Technical Leadership</span>
+</div>
+
+<p class="c-intro">Most small organizations can't afford a full-time CTO or cloud architect — but they face the same technology decisions large enterprises do. I bring senior-level expertise directly to decision-makers, with no account managers, no junior staff, and no handoffs.</p>
+
+<div class="c-sec">
+    <div class="c-sec-title">Services</div>
+
+    <div class="svc-card featured">
+        <h4>🧭 Technology Strategy & IT Consulting</h4>
+        <p class="desc">A trusted technology advisor who understands your operations, speaks plainly about tradeoffs, and helps you make confident decisions — without being sold to.</p>
+        <ul>
+            <li>Technology assessment and written strategic roadmap</li>
+            <li>Vendor evaluation, comparison, and recommendation</li>
+            <li>IT budget review and cost optimization</li>
+            <li>Security posture and compliance review (FERPA, COPPA)</li>
+            <li>Fractional CTO advisory — ongoing strategic guidance</li>
+        </ul>
+        <span class="rate">Starting at $500 · Fixed-price engagements available</span>
+    </div>
+
+    <div class="svc-card">
+        <h4>🤖 AI Implementation & Workflow Automation</h4>
+        <p class="desc">Practical AI adoption — moving from "we should use AI" to working tools that save real time and eliminate real errors.</p>
+        <ul>
+            <li>AI tool audit and adoption roadmap for your specific workflows</li>
+            <li>Custom workflow automation using n8n, Claude, and AWS Lambda</li>
+            <li>AI-assisted application development with Cursor and Claude</li>
+            <li>Staff training and enablement workshops on AI tools</li>
+        </ul>
+        <span class="rate">$75–$100 / hour · Project-based available</span>
+    </div>
+
+    <div class="svc-card">
+        <h4>☁️ AWS Cloud Infrastructure</h4>
+        <p class="desc">Production AWS architecture design, security, and implementation — using Terraform IaC so your infrastructure is reproducible, auditable, and secure.</p>
+        <ul>
+            <li>Cloud infrastructure setup and provisioning</li>
+            <li>AWS security audit and hardening (IAM, KMS, CloudTrail, VPC)</li>
+            <li>Cost review and optimization — identify and eliminate cloud waste</li>
+            <li>Terraform IaC and GitHub Actions CI/CD pipeline setup</li>
+        </ul>
+        <span class="rate">$85–$125 / hour · AWS Certified Solutions Architect</span>
+    </div>
+
+    <div class="svc-card">
+        <h4>📊 Data Pipelines & Analytics</h4>
+        <p class="desc">Turn raw data into decisions — pipelines, dashboards, and analytical models that surface what your organization needs to act on.</p>
+        <ul>
+            <li>AWS data pipeline design (S3, Glue, Athena, EventBridge, Lambda)</li>
+            <li>SQL database design, optimization, and data quality remediation</li>
+            <li>Python data processing, scoring models, and API data ingestion</li>
+            <li>Dashboard and reporting development for leadership and operations</li>
+        </ul>
+        <span class="rate">$65–$95 / hour · M.S. Data Science</span>
+    </div>
+</div>
+
+<div class="c-sec">
+    <div class="c-sec-title">Outcomes from Production Work</div>
+    <div class="out-grid">
+        <div class="out-box"><div class="out-num">$250K+</div><div class="out-lbl">Cost savings through infrastructure optimization and vendor analysis</div></div>
+        <div class="out-box"><div class="out-num">$66K+</div><div class="out-lbl">Cost-avoidance through competitive solution design</div></div>
+        <div class="out-box"><div class="out-num">Zero</div><div class="out-lbl">Missed orders or late invoices since PO system go-live</div></div>
+        <div class="out-box"><div class="out-num">Zero</div><div class="out-lbl">Unplanned outages after complete infrastructure rebuild</div></div>
+        <div class="out-box"><div class="out-num">3</div><div class="out-lbl">Production AWS apps built with AI-native development tools</div></div>
+        <div class="out-box"><div class="out-num">20+</div><div class="out-lbl">Technology leaders trained through semi-annual workshops</div></div>
+    </div>
+</div>
+
+<div class="c-sec">
+    <div class="c-sec-title">Who I Work With</div>
+    <div class="who-grid">
+        <div class="who-card"><h5>Small Businesses</h5><p>Organizations of 5–100 people that need real technology leadership without a full-time hire. I work directly with owners and operators.</p></div>
+        <div class="who-card"><h5>Non-Profits & Schools</h5><p>Mission-driven organizations navigating FERPA, COPPA, and data security requirements with limited IT resources and tight budgets.</p></div>
+        <div class="who-card"><h5>Startups & Founders</h5><p>Early-stage teams that need AWS infrastructure or AI-powered tools built fast — with production-grade quality from day one.</p></div>
+    </div>
+</div>
+
+<div class="c-sec">
+    <div class="c-sec-title">How It Works</div>
+    <div class="proc-grid">
+        <div class="proc-step"><div class="proc-num">STEP 01</div><div class="proc-title">Free Consultation</div><div class="proc-desc">30 minutes to understand your situation and whether I'm the right fit. No obligation.</div></div>
+        <div class="proc-step"><div class="proc-num">STEP 02</div><div class="proc-title">Scoped Proposal</div><div class="proc-desc">Clear written proposal with defined scope, deliverables, timeline, and pricing. No surprises.</div></div>
+        <div class="proc-step"><div class="proc-num">STEP 03</div><div class="proc-title">Direct Delivery</div><div class="proc-desc">I do the work — not a junior contractor. You have direct access to me throughout.</div></div>
+        <div class="proc-step"><div class="proc-num">STEP 04</div><div class="proc-title">Documentation</div><div class="proc-desc">Every engagement ends with documentation so your team can maintain what we built.</div></div>
+    </div>
+</div>
+
+<div class="c-contact">
+    <h4>Let's talk about what you're trying to solve.</h4>
+    <p>First consultation is free. No obligation, no sales pitch — just an honest conversation about whether I can help.</p>
+    <a href="mailto:drhollers@gmail.com" class="btn-w">Email Me Directly</a>
+    <a href="https://linkedin.com/in/brenthollers" target="_blank" class="btn-o">Connect on LinkedIn</a>
+</div>
+
+</div>
+</section>
+
+<section id="menu-pane" class="menu text-center">
+    <h4 class="text-center mt-3"><a class="menu-item" href="/">home</a></h4>
+</section>
+
+<footer class="text-center footer">
+    <hr />
+    <h6 class="text-center copyright">© 2026. Brent Hollers. All Rights Reserved.</h6>
+    <h6 class="text-center powered">
+        <a href="https://gohugo.io/">Hugo</a>
+        <a href="https://github.com/shenoydotme/hugo-goa">Goa</a> by
+        <a href="https://shenoy.me">shenoydotme</a> and
+        <a href="https://incirclemedia.com">Incircle Media</a>
+    </h6>
+</footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="/js/custom.js"></script>
+</body>
+</html>
